@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+.text_holder {
+    background-color: rgb(33, 33, 33);
+    color: gray;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.header,
+.content_row,
+.footer {
+    width: 1200px;
+    margin: 5px auto;
+}
+
+.header,
+.footer {
+    height: 200px;
+    line-height: 200px;
+}
+
+.content_row {
+    height: 500px;
+    line-height: 500px;
+}
+.content_row .main {
+    width: calc(70% - 5px);
+}
+.content_row .sidebar {
+    width: calc(30% - 5px);
+}
+
+.right_sidebar .main {
+    float: left;
+}
+.right_sidebar .sidebar {
+    float: right;
+}
+
+.left_sidebar .main {
+    float: right;
+}
+.left_sidebar .sidebar {
+    float: left;
+}

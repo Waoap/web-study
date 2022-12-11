@@ -1,0 +1,145 @@
+* {
+    font-family: '仿宋';
+    font-weight: bold;
+    margin: 0px;
+}
+
+.form_header .form_header_title,
+.form_row,
+.form_row .form_row_title,
+.form_row .form_row_input_area {
+    display: flex;
+    align-items: center;
+}
+
+.form_header .form_header_title {
+    background-color: rgb(243, 243, 243);
+}
+
+.form_header .form_header_title .form_header_title {
+    font-size: larger;
+    padding: 15px 5px 15px 20px;
+}
+
+.form_header .form_header_title .form_header_title_helper,
+.form_row .form_row_title .form_row_title_helper {
+    height: 20px;
+    width: 20px;
+}
+
+.form_header .form_header_title .form_header_title_prompt {
+    color: gray;
+    margin-left: 20px;
+}
+
+.form_header .form_header_title .form_header_custom_element {
+    position: absolute;
+    right: 25px;
+}
+
+.form_row {
+    margin-top: 60px;
+}
+
+.form_row_lite {
+    margin-top: 40px;
+}
+
+.form_row .form_row_title {
+    position: absolute;
+    right: 85%;
+}
+
+.form_row .form_row_title .form_row_not_null {
+    color: red;
+    margin: 0px 5px;
+}
+
+.form_row .form_row_title .form_row_title_helper {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.form_row .form_row_input_area {
+    position: absolute;
+    left: 16%;
+}
+
+.form_row .form_row_input_area .form_row_input_prompt {
+    color: gray;
+}
+
+.form_row .form_row_input_area .form_row_input_link:link,
+.form_row .form_row_input_area .form_row_input_link:visited {
+    text-decoration: none;
+}
+
+.form_row .form_row_input_area .form_row_input_link:hover {
+    text-decoration: underline;
+}
+
+.form_row .form_row_input_area .form_row_text_input,
+.form_row .form_row_input_area .form_row_button_input {
+    margin: 10px 10px 10px 0px;
+    padding: 5px;
+}
+
+.form_row .form_row_input_area .form_row_text_input {
+    width: 200px;
+}
+
+.form_row .form_row_input_area .form_row_radio_input_label,
+.form_row .form_row_input_area .form_row_checkbox_input_label {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.form_row .form_row_input_area .form_row_button_input {
+    flex-wrap: wrap;
+}
+
+.form_row .form_row_input_area .form_row_select {
+    width: 180px;
+    padding-block: 5px;
+}
+
+.form_footer {
+    margin-block: 70px;
+}
+
+#product_name,
+#product_trade_port {
+    width: 300px;
+}
+
+#min_order_quantity,
+#product_min_order_quantity_unit,
+#FOB_price,
+#FOB_price_unit {
+    width: 100px;
+}
+
+#rich_text_product_description_editor_holder {
+    height: 400px;
+}
+
+#rich_text_product_description_editor {
+    width: 1000px;
+    height: 400px;
+    visibility: hidden;
+}
+
+#form_row_title_inline_right {
+    right: 45.5%;
+}
+
+#form_row_input_area_inline_right {
+    left: 55%;
+}
+
+#product_show_field_customization
+    .form_row
+    .form_row_input_area
+    .form_row_checkbox_input_label {
+    width: 70px;
+}

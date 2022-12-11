@@ -1,0 +1,255 @@
+body {
+    font-family: '微软雅黑';
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(51, 153, 204);
+}
+
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.nav {
+    width: 74%;
+    height: 80px;
+    padding: 32px;
+    margin-inline: auto;
+}
+
+.nav > * {
+    height: 100%;
+}
+
+.nav_logo {
+    float: left;
+}
+
+.nav_list {
+    float: left;
+    width: calc(100% - 300px);
+}
+
+.nav_list ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav_list li {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+}
+
+.nav_list a {
+    display: block;
+}
+
+.nav_list > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.nav_list > ul > li {
+    display: inline;
+}
+
+.nav_list > ul > li:hover > a {
+    background-color: rgb(240, 154, 8);
+    color: rgb(51, 153, 204);
+}
+
+.nav_list > ul > li:hover > ul {
+    display: block;
+}
+
+.nav_list ul ul {
+    display: none;
+    position: relative;
+    background-color: rgb(240, 154, 8);
+}
+
+.nav_list ul ul a {
+    color: white;
+}
+
+.nav_list ul ul a:hover {
+    background-color: red;
+}
+
+.nav_list_search_box {
+    float: right;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 19px;
+}
+
+.nav_list_search_box div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-inline: 8px;
+}
+
+.nav_list_search_box #search2 {
+    display: none;
+}
+
+.nav_list_search_box input {
+    display: none;
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 5px;
+}
+
+.nav_list_search_box:hover div,
+.nav_list_search_box div:focus-within {
+    border: 3px solid rgb(51, 153, 204);
+}
+
+.nav_list_search_box:hover #search1,
+.nav_list_search_box:focus-within #search1 {
+    display: none;
+}
+
+.nav_list_search_box:hover #search2,
+.nav_list_search_box:focus-within #search2,
+.nav_list_search_box:hover input,
+.nav_list_search_box:focus-within input {
+    display: block;
+}
+
+.news {
+    font-size: 0;
+    width: 100%;
+}
+
+.news > img {
+    width: 100%;
+}
+
+.content {
+    width: 74%;
+    margin: 0 auto;
+}
+
+.content_path {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.content_path > * {
+    margin-inline: 6px;
+}
+
+.content_view {
+    background-color: rgb(245, 245, 245);
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.content_sidebar {
+    float: left;
+    width: 21%;
+    height: fit-content;
+}
+
+.content_sidebar ul {
+    float: left;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.content_sidebar ul li {
+    width: 100%;
+}
+
+.content_sidebar ul li a {
+    display: block;
+    text-align: center;
+    width: calc(100% - 25px);
+    padding: 10px;
+}
+
+.content_sidebar ul li a:not(a.content_sidebar_categories) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 5px solid gray;
+}
+
+.content_sidebar ul li a:hover:not(a.content_sidebar_categories) {
+    border-left: 5px solid rgb(51, 153, 204);
+}
+
+.content_sidebar_categories {
+    border: none;
+    border-left: 5px solid rgb(51, 153, 204);
+    background-color: rgb(51, 153, 204);
+    color: white;
+}
+
+.content_main {
+    float: left;
+    background-color: white;
+    width: calc(79% - 45px);
+    height: fit-content;
+    padding: 0 0 20px 45px;
+}
+
+.content_main_title {
+    text-align: center;
+    margin-top: 0;
+}
+
+.content_main_prompt {
+    text-align: center;
+    color: gray;
+}
+
+.content_main_images {
+    text-align: center;
+}
+
+.content_main_images img#img1 {
+    float: left;
+}
+
+.content_main_images img#img3 {
+    float: right;
+}
+
+.content_main_content {
+    line-height: 28px;
+    text-indent: 2em;
+}
+
+.footer {
+    background-color: rgb(225, 225, 225);
+    color: gray;
+    text-align: center;
+    width: calc(100% - 40px);
+    padding: 20px;
+}
+
+.footer p {
+    margin: 10px;
+}

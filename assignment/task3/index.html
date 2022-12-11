@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>学生信息管理系统</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <div id="header">
+            <div class="header_line"></div>
+            <h1 id="header_title">学生信息管理系统</h1>
+            <div class="header_line"></div>
+        </div>
+        <div id="edit_bar">
+            <button id="add_btn" class="green_bg_btn" type="button">
+                新 增
+            </button>
+            <button id="remove_btn" class="red_bg_btn" type="button">
+                删 除
+            </button>
+        </div>
+        <div id="container">
+            <table id="table">
+                <tr id="table_header">
+                    <th>
+                        <input type="checkbox" id="full_page_selected_box" />
+                    </th>
+                    <th>序号</th>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>学院</th>
+                    <th>专业</th>
+                    <th>年级</th>
+                    <th>班级</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </table>
+        </div>
+        <div id="review_bar">
+            第
+            <span id="current_page_viewer">1</span>
+            页，共
+            <span id="student_count_viewer">0</span>
+            条（每页显示 10 条）
+            <div>
+                <button id="last_page_btn" class="green_bg_btn" type="button">
+                    上一页
+                </button>
+                <button id="next_page_btn" class="red_bg_btn" type="button">
+                    下一页
+                </button>
+            </div>
+        </div>
+        <div id="dialog_container">
+            <div id="dialog">
+                <div id="dialog_header">
+                    <h1 id="dialog_header_title">新增学生信息</h1>
+                </div>
+                <div id="dialog_content">
+                    <div>
+                        <label for="student_no">学号</label>
+                        <input type="number" id="student_no" />
+                    </div>
+                    <div>
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" />
+                    </div>
+                    <div>
+                        <label for="college">学院</label>
+                        <input type="text" id="college" />
+                    </div>
+                    <div>
+                        <label for="major">专业</label>
+                        <input type="text" id="major" />
+                    </div>
+                    <div>
+                        <label for="grade">年级</label>
+                        <input type="number" id="grade" />
+                    </div>
+                    <div>
+                        <label for="class_no">班级</label>
+                        <input type="number" id="class_no" />
+                    </div>
+                    <div>
+                        <label for="age">年龄</label>
+                        <input type="number" id="age" />
+                    </div>
+                </div>
+                <hr />
+                <div id="dialog_control_bar">
+                    <button id="confirm_btn" class="green_bg_btn" type="button">
+                        确认
+                    </button>
+                    <button id="cancel_btn" class="red_bg_btn" type="button">
+                        取消
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="scripts/main.js"></script>
+</html>

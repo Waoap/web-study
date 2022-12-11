@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Brands and products</title>
+        <link rel="stylesheet" href="../styles/base.css" />
+        <link rel="stylesheet" href="../styles/brands-and-products.css" />
+        <script src="../scripts/jquery-3.6.1.min.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="menu">
+                <div id="all_products" class="menu_item select">
+                    <a href="info-all.html" target="info_container">全部产品</a>
+                </div>
+                <div id="various_products" class="menu_item">
+                    <a
+                        href="javascript:void(0);"
+                        id="best_bite"
+                        target="info_container">
+                        百滋百特
+                    </a>
+                    <div class="pop_menu_decoration"></div>
+                </div>
+                <div class="pop_menu">
+                    <div class="pop_menu_item select">
+                        <a
+                            href="info-various-donuts.html"
+                            target="info_container">
+                            美味甜甜圈
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-cheesecake.html"
+                            target="info_container">
+                            芝士蛋糕
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-puff.html"
+                            target="info_container">
+                            闪电泡芙
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-donuts2.html"
+                            target="info_container">
+                            慕斯甜甜圈
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-softbagel.html"
+                            target="info_container">
+                            软欧圈
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-muffinbagel.html"
+                            target="info_container">
+                            麦芬圈
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-pastrybagel.html"
+                            target="info_container">
+                            起酥圈
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-regularcake.html"
+                            target="info_container">
+                            常规蛋糕
+                        </a>
+                    </div>
+                    <div class="pop_menu_item">
+                        <a
+                            href="info-various-fruitjuice.html"
+                            target="info_container">
+                            果汁饮料
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <iframe
+                id="info_container"
+                name="info_container"
+                class="container"
+                src="info-all.html"
+                frameborder="0"></iframe>
+        </div>
+        <script>
+            $(function () {
+                $('#best_bite').click(function () {
+                    $('.pop_menu_item.select a')[0].click()
+                })
+
+                $('.menu_item').click(function () {
+                    $(this).addClass('select').siblings().removeClass('select')
+                })
+
+                $('.pop_menu_item').click(function () {
+                    $(this).addClass('select').siblings().removeClass('select')
+                })
+            })
+        </script>
+        <script src="../scripts/autosize-iframes.js"></script>
+    </body>
+</html>

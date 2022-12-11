@@ -1,0 +1,183 @@
+* {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: calc(100vh - 20px);
+    background-color: rgb(240, 236, 233);
+    padding: 10px 20px;
+}
+
+button {
+    height: 40px;
+    width: 90px;
+}
+
+button[class='green_bg_btn'] {
+    color: white;
+    background-color: rgb(92, 184, 92);
+}
+
+button[class='red_bg_btn'] {
+    color: white;
+    background-color: rgb(217, 83, 79);
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+a:hover {
+    color: gray;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+.header_line {
+    height: 3px;
+    width: calc(45% - 150px);
+    background-color: rgb(192, 156, 122);
+    margin: auto 0;
+}
+
+#header_title {
+    height: 25px;
+    line-height: 25px;
+    color: rgb(145, 145, 145);
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 auto;
+}
+
+#edit_bar {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+#edit_bar #add_btn {
+    margin-right: 5px;
+}
+
+#container {
+    height: calc(100% - 140px);
+    margin-bottom: 10px;
+}
+
+#table {
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: auto;
+}
+
+#table tr#table_header {
+    background-color: rgb(218, 222, 225);
+}
+
+#table tr.info:nth-child(even) {
+    background-color: white;
+}
+
+#table tr.info:nth-child(odd) {
+    background-color: rgb(238, 241, 248);
+}
+
+#table tr.info:has(:hover) {
+    background-color: mistyrose;
+}
+
+#table th {
+    height: 60px;
+    line-height: 60px;
+}
+
+#table td {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+#table td #review {
+    margin-right: 10px;
+}
+
+#review_bar {
+    height: 40px;
+    line-height: 40px;
+}
+
+#review_bar div {
+    float: right;
+}
+
+#review_bar div #last_page_btn {
+    margin-right: 5px;
+}
+
+#dialog_container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+#dialog {
+    height: 510px;
+    width: 600px;
+    background-color: white;
+}
+
+#dialog_header {
+    background-color: rgb(85, 85, 85);
+    padding: 0 20px;
+}
+
+#dialog_header_title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+#dialog_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 140px);
+    padding: 20px;
+}
+
+#dialog_content div {
+    font-weight: bold;
+    margin: auto;
+}
+
+#dialog_content div label {
+    margin-right: 20px;
+}
+
+#dialog_content div input {
+    width: 200px;
+}
+
+#dialog_control_bar {
+    float: right;
+    height: 60px;
+    padding: 10px 30px;
+}
+
+#dialog_control_bar #confirm_btn {
+    margin-right: 5px;
+}

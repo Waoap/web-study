@@ -1,0 +1,77 @@
+body {
+    font-size: x-large;
+    margin: 0;
+}
+
+a,
+a:visited {
+    color: black;
+}
+
+.pull_down_menu_sample,
+.side_navigation_sample {
+    float: left;
+    width: calc(50% - 40px);
+    margin-left: 20px;
+}
+
+.pull_down_menu {
+    width: fit-content;
+}
+
+.pull_down_menu .menu_body {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.pull_down_menu .menu_list {
+    border: 1px outset gray;
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pull_down_menu:hover .menu_list {
+    display: block;
+}
+
+.pull_down_menu .menu_item {
+    list-style: none;
+}
+
+.pull_down_menu .menu_item a {
+    display: block;
+    text-decoration: none;
+    width: 150px;
+    padding: 20px;
+}
+
+.pull_down_menu .menu_item a:hover {
+    background-color: gray;
+    color: white;
+}
+
+.side_navigation {
+    background-color: rgb(241, 241, 241);
+    padding: 0;
+}
+
+.side_navigation .navigation_item {
+    list-style: none;
+    margin: 0;
+}
+
+.side_navigation .navigation_item a {
+    display: block;
+    text-decoration: none;
+    width: calc(100% - 60px);
+    padding: 30px;
+}
+
+.side_navigation .navigation_item a:hover {
+    background-color: gray;
+    color: white;
+}

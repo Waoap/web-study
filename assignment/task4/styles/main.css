@@ -1,0 +1,57 @@
+#login_box > form > div {
+    margin: 20px;
+}
+
+#login_box div.input_box {
+    display: flex;
+    height: 30px;
+}
+
+#login_box div.input_box label,
+#login_box div.input_box div.sign {
+    height: 30px;
+    line-height: 30px;
+}
+
+#login_box div.input_box input {
+    height: 20px;
+    margin: auto 0;
+}
+
+#login_box div.input_box input:focus {
+    outline-color: slateblue;
+}
+
+#login_box div.input_box div.sign {
+    display: inline;
+    color: red;
+    margin: 0 10px;
+}
+
+#login_box div.input_box div.prompt {
+    height: 30px;
+    line-height: 30px;
+    color: rgb(55, 55, 55);
+    padding: 0 5px;
+}
+
+#login_box div.input_box div.prompt > img {
+    margin-right: 5px;
+}
+
+#login_box div.input_box .forbid {
+    background-color: lightcoral;
+}
+
+#login_box div.input_box .pass {
+    background-color: lightgreen;
+}
+
+#login_box div#btn_box {
+    margin-top: 25px;
+}
+
+#login_box div#btn_box input {
+    padding: 5px 20px;
+    margin: 0 20px;
+}
