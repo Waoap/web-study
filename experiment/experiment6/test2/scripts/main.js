@@ -1,3 +1,7 @@
+/**
+ * 轮播图
+ * from:L1 to:L113
+ */
 const IMAGES_BOX = document.getElementById('imgs_box')
 const IMAGES_SIZE = IMAGES_BOX.childElementCount
 const IMAGE_WIDTH = 1200
@@ -10,6 +14,10 @@ const MAX_INDEX = IMAGES_SIZE - 1
 
 let index = MIN_INDEX
 
+/**
+ * 在移动之前，预先准备图片
+ * @param {String} orientation 图片移动方向
+ */
 function prepareImages(orientation = 'r2l') {
     switch (orientation) {
         case 'r2l':
@@ -32,6 +40,10 @@ function prepareImages(orientation = 'r2l') {
     }
 }
 
+/**
+ * 移动图片
+ * @param {String} orientation 图片移动方向
+ */
 function move(orientation = 'r2l') {
     switch (orientation) {
         // 图片从右向左移
@@ -81,6 +93,23 @@ function move(orientation = 'r2l') {
     }
 }
 
+/**
+ * 播放上一张图片
+ */
+document.getElementById('previous').addEventListener('click', function () {
+    move('l2r')
+})
+
+/**
+ * 播放下一张图片
+ */
+document.getElementById('next').addEventListener('click', function () {
+    move('r2l')
+})
+
+/**
+ * 自动播放轮播图
+ */
 const play = (PLAY.onclick = function () {
     if (IMAGES_BOX.onPlaying === undefined) {
         IMAGES_BOX.onPlaying = window.setInterval(move, 4000)
@@ -88,6 +117,7 @@ const play = (PLAY.onclick = function () {
         PAUSE.classList.add('display')
     }
 })
+play()
 
 PAUSE.onclick = function () {
     if (IMAGES_BOX.onPlaying !== undefined) {
@@ -97,13 +127,3 @@ PAUSE.onclick = function () {
         PLAY.classList.add('display')
     }
 }
-
-document.getElementById('previous').addEventListener('click', function () {
-    move('l2r')
-})
-
-document.getElementById('next').addEventListener('click', function () {
-    move('r2l')
-})
-
-play()

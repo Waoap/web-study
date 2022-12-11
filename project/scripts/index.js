@@ -1,6 +1,6 @@
 /**
- * *轮播图
- * ![line:1...line:113]
+ * 轮播图
+ * from:L1 to:L113
  */
 const IMAGES_BOX = document.getElementById('images_box')
 const IMAGES_SIZE = IMAGES_BOX.childElementCount
@@ -10,8 +10,8 @@ const MAX_INDEX = IMAGES_SIZE - 1
 let index = MIN_INDEX
 
 /**
- * *在移动之前，预先图片
- * @param {图片移动方向} orientation
+ * 在移动之前，预先准备图片
+ * @param {String} orientation 图片移动方向
  */
 function prepareImages(orientation = 'r2l') {
     switch (orientation) {
@@ -36,8 +36,8 @@ function prepareImages(orientation = 'r2l') {
 }
 
 /**
- * *移动图片
- * @param {图片移动方向} orientation
+ * 移动图片
+ * @param {String} orientation 图片移动方向
  */
 function move(orientation = 'r2l') {
     switch (orientation) {
@@ -89,21 +89,21 @@ function move(orientation = 'r2l') {
 }
 
 /**
- * *上一张图片按键
+ * 播放上一张图片
  */
 document.getElementById('previous').addEventListener('click', function () {
     move('l2r')
 })
 
 /**
- * *下一张图片按键
+ * 播放下一张图片
  */
 document.getElementById('next').addEventListener('click', function () {
     move('r2l')
 })
 
 /**
- * *播放轮播图
+ * 自动播放轮播图
  */
 const play = function () {
     if (IMAGES_BOX.onPlaying === undefined) {
