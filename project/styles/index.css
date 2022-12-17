@@ -39,7 +39,6 @@
     position: relative;
     width: 90px;
     height: 90px;
-    margin: 0 18px;
 }
 
 .logo .logo_title {
@@ -51,7 +50,6 @@
     font-family: 'STXingkai';
     text-align: center;
     color: rgb(203, 166, 132);
-    overflow: hidden;
 }
 
 /* *导航栏和底栏 */
@@ -59,8 +57,20 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgb(101, 54, 10);
+}
+
+.tool_bar .tool_bar_left {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.tool_bar .tool_bar_right {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
 }
 
 /* *导航栏 */
@@ -77,16 +87,12 @@
     background-color: white;
 }
 
-#nav .nav_item {
-    width: 175px;
-    overflow: hidden;
-}
-
 #nav .nav_item > a {
     display: block;
     text-shadow: 0 0 20px;
     text-align: center;
     line-height: 100px;
+    padding: 0 40px;
 }
 
 #nav .nav_item.select > a {
