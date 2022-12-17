@@ -10,38 +10,38 @@ body {
   justify-content: center;
 }
 
-#login_box > form > div {
+#login-box > form > div {
   margin: 20px;
 }
 
-#login_box div.input_box {
+#login-box div.input-box {
   position: relative;
   display: flex;
   height: 30px;
 }
 
-#login_box div.input_box label,
-#login_box div.input_box div.sign {
+#login-box div.input-box label,
+#login-box div.input-box div.sign {
   height: 30px;
   line-height: 30px;
 }
 
-#login_box div.input_box input {
+#login-box div.input-box input {
   height: 20px;
   margin: auto 0;
 }
 
-#login_box div.input_box input:focus {
+#login-box div.input-box input:focus {
   outline-color: slateblue;
 }
 
-#login_box div.input_box div.sign {
+#login-box div.input-box div.sign {
   display: inline;
   color: red;
   margin: 0 10px;
 }
 
-#login_box div.input_box div.prompt {
+#login-box div.input-box div.prompt {
   position: absolute;
   left: 100%;
   height: 30px;
@@ -51,23 +51,23 @@ body {
   padding: 0 5px;
 }
 
-#login_box div.input_box div.prompt > img {
+#login-box div.input-box div.prompt > img {
   margin-right: 5px;
 }
 
-#login_box div.input_box .forbid {
+#login-box div.input-box .forbid {
   background-color: lightcoral;
 }
 
-#login_box div.input_box .pass {
+#login-box div.input-box .pass {
   background-color: lightgreen;
 }
 
-#login_box div#btn_box {
+#login-box div#btn-box {
   margin-top: 25px;
 }
 
-#login_box div#btn_box input {
+#login-box div#btn-box input {
   padding: 5px 20px;
   margin: 0 20px;
 }

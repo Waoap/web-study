@@ -8,25 +8,25 @@ a:visited {
   color: black;
 }
 
-.pull_down_menu_sample,
-.side_navigation_sample {
+.pull-down-menu-sample,
+.side-navigation-sample {
   float: left;
   width: calc(50% - 40px);
   margin-left: 20px;
 }
 
-.pull_down_menu {
+.pull-down-menu {
   width: fit-content;
 }
 
-.pull_down_menu .menu_body {
+.pull-down-menu .menu-body {
   background-color: green;
   color: white;
   text-align: center;
   padding: 25px;
 }
 
-.pull_down_menu .menu_list {
+.pull-down-menu .menu-list {
   border: 1px outset gray;
   position: absolute;
   display: none;
@@ -34,44 +34,44 @@ a:visited {
   padding: 0;
 }
 
-.pull_down_menu:hover .menu_list {
+.pull-down-menu:hover .menu-list {
   display: block;
 }
 
-.pull_down_menu .menu_item {
+.pull-down-menu .menu-item {
   list-style: none;
 }
 
-.pull_down_menu .menu_item a {
+.pull-down-menu .menu-item a {
   display: block;
   text-decoration: none;
   width: 150px;
   padding: 20px;
 }
 
-.pull_down_menu .menu_item a:hover {
+.pull-down-menu .menu-item a:hover {
   background-color: gray;
   color: white;
 }
 
-.side_navigation {
+.side-navigation {
   background-color: rgb(241, 241, 241);
   padding: 0;
 }
 
-.side_navigation .navigation_item {
+.side-navigation .navigation-item {
   list-style: none;
   margin: 0;
 }
 
-.side_navigation .navigation_item a {
+.side-navigation .navigation-item a {
   display: block;
   text-decoration: none;
   width: calc(100% - 60px);
   padding: 30px;
 }
 
-.side_navigation .navigation_item a:hover {
+.side-navigation .navigation-item a:hover {
   background-color: gray;
   color: white;
 }

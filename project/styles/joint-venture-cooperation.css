@@ -14,7 +14,7 @@
   src: url('../fonts/FZPWJW.ttf');
 }
 
-#content #content_prompt {
+#content #content-prompt {
   position: absolute;
   top: 173px;
   left: calc(50% - 374px);

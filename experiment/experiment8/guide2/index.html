@@ -26,21 +26,21 @@
   <body>
     <div id="menu">
       <span id="m1">第一章</span>
-      <div id="div_m1">
+      <div id="div-m1">
         <a href="#">A</a><br />
         <a href="#">B</a><br />
         <a href="#">C</a><br />
         <a href="#">D</a><br />
       </div>
       <span id="m2">第二章</span>
-      <div id="div_m2">
+      <div id="div-m2">
         <a href="#">1</a><br />
         <a href="#">2</a><br />
         <a href="#">3</a><br />
         <a href="#">4</a><br />
       </div>
       <span id="m3">第三章</span>
-      <div id="div_m3">
+      <div id="div-m3">
         <a href="#">!</a><br />
         <a href="#">@</a><br />
         <a href="#">#</a><br />
@@ -51,7 +51,7 @@
       $(function () {
         $('#menu > span').click(function () {
           $('#menu > div').hide()
-          $('#div_' + this.id).show()
+          $('#div-' + this.id).show()
         })
       })
     </script>

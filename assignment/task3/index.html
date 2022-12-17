@@ -9,19 +9,19 @@
   </head>
   <body>
     <div id="header">
-      <div class="header_line"></div>
-      <h1 id="header_title">学生信息管理系统</h1>
-      <div class="header_line"></div>
+      <div class="header-line"></div>
+      <h1 id="header-title">学生信息管理系统</h1>
+      <div class="header-line"></div>
     </div>
-    <div id="edit_bar">
-      <button id="add_btn" class="green_bg_btn" type="button">新 增</button>
-      <button id="remove_btn" class="red_bg_btn" type="button">删 除</button>
+    <div id="edit-bar">
+      <button id="add-btn" class="green-bg-btn" type="button">新 增</button>
+      <button id="remove-btn" class="red-bg-btn" type="button">删 除</button>
     </div>
     <div id="container">
       <table id="table">
-        <tr id="table_header">
+        <tr id="table-header">
           <th>
-            <input type="checkbox" id="full_page_selected_box" />
+            <input type="checkbox" id="full-page-selected-box" />
           </th>
           <th>序号</th>
           <th>学号</th>
@@ -35,62 +35,74 @@
         </tr>
       </table>
     </div>
-    <div id="review_bar">
+    <div id="review-bar">
       第
-      <span id="current_page_viewer">1</span>
+      <span id="current-page-viewer">1</span>
       页，共
-      <span id="student_count_viewer">0</span>
+      <span id="student-count-viewer">0</span>
       条（每页显示 10 条）
       <div>
-        <button id="last_page_btn" class="green_bg_btn" type="button">
+        <button id="last-page-btn" class="green-bg-btn" type="button">
           上一页
         </button>
-        <button id="next_page_btn" class="red_bg_btn" type="button">
+        <button id="next-page-btn" class="red-bg-btn" type="button">
           下一页
         </button>
       </div>
     </div>
-    <div id="dialog_container">
+    <div id="dialog-container">
       <div id="dialog">
-        <div id="dialog_header">
-          <h1 id="dialog_header_title">新增学生信息</h1>
+        <div id="dialog-header">
+          <h1 id="dialog-header-title">新增学生信息</h1>
         </div>
-        <div id="dialog_content">
+        <div id="dialog-content">
           <div>
-            <label for="student_no">学号</label>
-            <input type="number" id="student_no" />
+            <label for="student-no">学号</label>
+            <input
+              type="text"
+              id="student-no"
+              oninput="value=value.replace(/[^0-9]/g,'');if(value.length > 11)value=value.slice(0, 11)" />
           </div>
           <div>
             <label for="name">姓名</label>
-            <input type="text" id="name" />
+            <input type="text" id="name" maxlength="10" />
           </div>
           <div>
             <label for="college">学院</label>
-            <input type="text" id="college" />
+            <input type="text" id="college" maxlength="10" />
           </div>
           <div>
             <label for="major">专业</label>
-            <input type="text" id="major" />
+            <input type="text" id="major" maxlength="10" />
           </div>
           <div>
             <label for="grade">年级</label>
-            <input type="number" id="grade" />
+            <input
+              type="text"
+              id="grade"
+              oninput="value=value.replace(/[^0-9]/g,'');if(value > 2022)value=2022" />
           </div>
           <div>
-            <label for="class_no">班级</label>
-            <input type="number" id="class_no" />
+            <label for="class-no">班级</label>
+            <input
+              type="number"
+              id="class-no"
+              oninput="value=value.replace(/[^0-9]/g,'');if(value.length > 3)value=value.slice(0, 3)" />
           </div>
           <div>
             <label for="age">年龄</label>
-            <input type="number" id="age" />
+            <input
+              type="number"
+              id="age"
+              oninput="value=value.replace(/[^0-9]/g,'');if(value > 50)value=50" />
           </div>
         </div>
         <hr />
-        <div id="dialog_control_bar">
-          <button id="confirm_btn" class="green_bg_btn" type="button">
+        <div id="dialog-control-bar">
+          <button id="confirm-btn" class="green-bg-btn" type="button">
             确认
           </button>
-          <button id="cancel_btn" class="red_bg_btn" type="button">取消</button>
+          <button id="cancel-btn" class="red-bg-btn" type="button">取消</button>
         </div>
       </div>
     </div>

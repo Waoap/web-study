@@ -11,18 +11,18 @@
   margin: 0 34px;
 }
 
-#info .item.select .item_title {
+#info .item.select .item-title {
   visibility: visible;
 }
 
-#info .item_title {
+#info .item-title {
   visibility: hidden;
   width: fit-content;
   position: relative;
   margin: 20px auto;
 }
 
-#info .item_title_txt {
+#info .item-title-txt {
   font-size: 16px;
   font-weight: bold;
   color: rgb(237, 109, 0);
@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-#info .item_title_decoration_l {
+#info .item-title-decoration-l {
   position: absolute;
   bottom: -5px;
   background-color: rgb(213, 105, 100);
@@ -38,7 +38,7 @@
   height: 1px;
 }
 
-#info .item_title_decoration_r {
+#info .item-title-decoration-r {
   position: absolute;
   left: 58%;
   bottom: -5px;
@@ -47,7 +47,7 @@
   height: 1px;
 }
 
-#info .item_title_decoration_dot {
+#info .item-title-decoration-dot {
   border-radius: 50%;
   background-color: rgb(213, 105, 100);
   position: absolute;
@@ -57,30 +57,30 @@
   height: 4px;
 }
 
-#info .item_title.green_color .item_title_txt {
+#info .item-title.green-color .item-title-txt {
   color: rgb(5, 191, 108);
 }
 
-#info .item_title.green_color .item_title_decoration_l,
-#info .item_title.green_color .item_title_decoration_r,
-#info .item_title.green_color .item_title_decoration_dot {
+#info .item-title.green-color .item-title-decoration-l,
+#info .item-title.green-color .item-title-decoration-r,
+#info .item-title.green-color .item-title-decoration-dot {
   background-color: rgb(5, 191, 108);
 }
 
-#info .item_content {
+#info .item-content {
   visibility: hidden;
   position: absolute;
   top: 72px;
 }
 
-#info .item_content p {
+#info .item-content p {
   font-size: 13px;
   color: rgb(51, 51, 51);
   line-height: 1.5;
   text-indent: 2em;
 }
 
-#info .item_detail {
+#info .item-detail {
   display: none;
   position: absolute;
   z-index: 100;
@@ -89,25 +89,25 @@
   height: 224px;
 }
 
-#info .item_detail_u {
+#info .item-detail-u {
   top: -160px;
 }
 
-#info .item_detail_r {
+#info .item-detail-r {
   left: 280px;
   top: 64px;
 }
 
-#info .item_detail_l {
+#info .item-detail-l {
   right: 280px;
   top: 64px;
 }
 
-#info .item:has(:hover) .item_detail {
+#info .item:has(:hover) .item-detail {
   display: block;
 }
 
-#info .item_detail_title {
+#info .item-detail-title {
   font-size: 16px;
   text-align: center;
   color: rgb(159, 68, 13);
@@ -115,7 +115,7 @@
   margin: 10px 0;
 }
 
-#info .item_detail_content p {
+#info .item-detail-content p {
   font-size: 13px;
   text-indent: 2em;
   color: rgb(51, 51, 51);

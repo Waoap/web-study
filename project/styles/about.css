@@ -17,13 +17,13 @@
   margin: 0 34px 30px;
 }
 
-#content .title_decoration_line {
+#content .title-decoration-line {
   background-color: rgb(112, 45, 19);
   width: 428px;
   height: 2px;
 }
 
-#content .title_decoration_dot {
+#content .title-decoration-dot {
   border-radius: 50%;
   background-color: rgb(112, 45, 19);
   width: 6px;
@@ -31,19 +31,19 @@
   margin: 0 5px;
 }
 
-#content #title_txt {
+#content #title-txt {
   color: rgb(112, 45, 19);
   line-height: 1.5;
   margin: 0 8.5px;
 }
 
-#content #company_introduction {
+#content #company-introduction {
   width: 966px;
   height: 296px;
   margin: 0 auto 196px;
 }
 
-#content #company_introduction p {
+#content #company-introduction p {
   font-size: 16px;
   color: rgb(51, 51, 51);
   text-indent: 2em;

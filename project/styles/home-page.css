@@ -17,13 +17,13 @@
   margin: 0 34px 50px;
 }
 
-#content .title_decoration_line {
+#content .title-decoration-line {
   background-color: rgb(112, 45, 19);
   width: 428px;
   height: 2px;
 }
 
-#content .title_decoration_dot {
+#content .title-decoration-dot {
   border-radius: 50%;
   background-color: rgb(112, 45, 19);
   width: 6px;
@@ -31,7 +31,7 @@
   margin: 0 5px;
 }
 
-#content #title_txt {
+#content #title-txt {
   color: rgb(112, 45, 19);
   line-height: 1.5;
   margin: 0 8.5px;
@@ -47,13 +47,13 @@
   background-color: white;
 }
 
-#content .item_title {
+#content .item-title {
   width: fit-content;
   position: relative;
   margin: 20px auto;
 }
 
-#content .item_title_txt {
+#content .item-title-txt {
   font-size: 16px;
   font-weight: bold;
   color: rgb(237, 109, 0);
@@ -61,7 +61,7 @@
   text-align: center;
 }
 
-#content .item_title_decoration_l {
+#content .item-title-decoration-l {
   position: absolute;
   bottom: -5px;
   background-color: rgb(213, 105, 100);
@@ -69,7 +69,7 @@
   height: 1px;
 }
 
-#content .item_title_decoration_r {
+#content .item-title-decoration-r {
   position: absolute;
   left: 58%;
   bottom: -5px;
@@ -78,7 +78,7 @@
   height: 1px;
 }
 
-#content .item_title_decoration_dot {
+#content .item-title-decoration-dot {
   border-radius: 50%;
   background-color: rgb(213, 105, 100);
   position: absolute;
@@ -88,7 +88,7 @@
   height: 4px;
 }
 
-#content .item_content {
+#content .item-content {
   font-size: 13px;
   text-indent: 2em;
   color: rgb(51, 51, 51);

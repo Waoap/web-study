@@ -29,68 +29,68 @@ a:hover {
   height: 100%;
 }
 
-.nav_logo {
+.nav-logo {
   float: left;
 }
 
-.nav_list {
+.nav-list {
   float: left;
   width: calc(100% - 300px);
 }
 
-.nav_list ul {
+.nav-list ul {
   list-style: none;
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
-.nav_list li {
+.nav-list li {
   text-align: center;
   height: 40px;
   line-height: 40px;
   width: 120px;
 }
 
-.nav_list a {
+.nav-list a {
   display: block;
 }
 
-.nav_list > ul {
+.nav-list > ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 100%;
 }
 
-.nav_list > ul > li {
+.nav-list > ul > li {
   display: inline;
 }
 
-.nav_list > ul > li:hover > a {
+.nav-list > ul > li:hover > a {
   background-color: rgb(240, 154, 8);
   color: rgb(51, 153, 204);
 }
 
-.nav_list > ul > li:hover > ul {
+.nav-list > ul > li:hover > ul {
   display: block;
 }
 
-.nav_list ul ul {
+.nav-list ul ul {
   display: none;
   position: relative;
   background-color: rgb(240, 154, 8);
 }
 
-.nav_list ul ul a {
+.nav-list ul ul a {
   color: white;
 }
 
-.nav_list ul ul a:hover {
+.nav-list ul ul a:hover {
   background-color: red;
 }
 
-.nav_list_search_box {
+.nav-list-search-box {
   float: right;
   display: flex;
   align-items: center;
@@ -99,18 +99,18 @@ a:hover {
   width: 19px;
 }
 
-.nav_list_search_box div {
+.nav-list-search-box div {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
   padding-inline: 8px;
 }
 
-.nav_list_search_box #search2 {
+.nav-list-search-box #search2 {
   display: none;
 }
 
-.nav_list_search_box input {
+.nav-list-search-box input {
   display: none;
   border: none;
   outline: none;
@@ -118,20 +118,20 @@ a:hover {
   padding: 5px;
 }
 
-.nav_list_search_box:hover div,
-.nav_list_search_box div:focus-within {
+.nav-list-search-box:hover div,
+.nav-list-search-box div:focus-within {
   border: 3px solid rgb(51, 153, 204);
 }
 
-.nav_list_search_box:hover #search1,
-.nav_list_search_box:focus-within #search1 {
+.nav-list-search-box:hover #search1,
+.nav-list-search-box:focus-within #search1 {
   display: none;
 }
 
-.nav_list_search_box:hover #search2,
-.nav_list_search_box:focus-within #search2,
-.nav_list_search_box:hover input,
-.nav_list_search_box:focus-within input {
+.nav-list-search-box:hover #search2,
+.nav-list-search-box:focus-within #search2,
+.nav-list-search-box:hover input,
+.nav-list-search-box:focus-within input {
   display: block;
 }
 
@@ -149,29 +149,29 @@ a:hover {
   margin: 0 auto;
 }
 
-.content_path {
+.content-path {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.content_path > * {
+.content-path > * {
   margin-inline: 6px;
 }
 
-.content_view {
+.content-view {
   background-color: rgb(245, 245, 245);
   height: fit-content;
   margin-top: 20px;
 }
 
-.content_sidebar {
+.content-sidebar {
   float: left;
   width: 21%;
   height: fit-content;
 }
 
-.content_sidebar ul {
+.content-sidebar ul {
   float: left;
   list-style: none;
   width: 100%;
@@ -179,35 +179,35 @@ a:hover {
   margin: 0;
 }
 
-.content_sidebar ul li {
+.content-sidebar ul li {
   width: 100%;
 }
 
-.content_sidebar ul li a {
+.content-sidebar ul li a {
   display: block;
   text-align: center;
   width: calc(100% - 25px);
   padding: 10px;
 }
 
-.content_sidebar ul li a:not(a.content_sidebar_categories) {
+.content-sidebar ul li a:not(a.content-sidebar-categories) {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   border-left: 5px solid gray;
 }
 
-.content_sidebar ul li a:hover:not(a.content_sidebar_categories) {
+.content-sidebar ul li a:hover:not(a.content-sidebar-categories) {
   border-left: 5px solid rgb(51, 153, 204);
 }
 
-.content_sidebar_categories {
+.content-sidebar-categories {
   border: none;
   border-left: 5px solid rgb(51, 153, 204);
   background-color: rgb(51, 153, 204);
   color: white;
 }
 
-.content_main {
+.content-main {
   float: left;
   background-color: white;
   width: calc(79% - 45px);
@@ -215,29 +215,29 @@ a:hover {
   padding: 0 0 20px 45px;
 }
 
-.content_main_title {
+.content-main-title {
   text-align: center;
   margin-top: 0;
 }
 
-.content_main_prompt {
+.content-main-prompt {
   text-align: center;
   color: gray;
 }
 
-.content_main_images {
+.content-main-images {
   text-align: center;
 }
 
-.content_main_images img#img1 {
+.content-main-images img#img1 {
   float: left;
 }
 
-.content_main_images img#img3 {
+.content-main-images img#img3 {
   float: right;
 }
 
-.content_main_content {
+.content-main-content {
   line-height: 28px;
   text-indent: 2em;
 }

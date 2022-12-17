@@ -15,12 +15,12 @@ button {
   width: 90px;
 }
 
-button[class='green_bg_btn'] {
+button[class='green-bg-btn'] {
   color: white;
   background-color: rgb(92, 184, 92);
 }
 
-button[class='red_bg_btn'] {
+button[class='red-bg-btn'] {
   color: white;
   background-color: rgb(217, 83, 79);
 }
@@ -41,14 +41,14 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.header_line {
+.header-line {
   height: 3px;
   width: calc(45% - 150px);
   background-color: rgb(192, 156, 122);
   margin: auto 0;
 }
 
-#header_title {
+#header-title {
   height: 25px;
   line-height: 25px;
   color: rgb(145, 145, 145);
@@ -57,12 +57,12 @@ a:hover {
   margin: 0 auto;
 }
 
-#edit_bar {
+#edit-bar {
   height: 40px;
   margin-bottom: 15px;
 }
 
-#edit_bar #add_btn {
+#edit-bar #add-btn {
   margin-right: 5px;
 }
 
@@ -77,7 +77,7 @@ a:hover {
   margin-bottom: auto;
 }
 
-#table tr#table_header {
+#table tr#table-header {
   background-color: rgb(218, 222, 225);
 }
 
@@ -108,20 +108,20 @@ a:hover {
   margin-right: 10px;
 }
 
-#review_bar {
+#review-bar {
   height: 40px;
   line-height: 40px;
 }
 
-#review_bar div {
+#review-bar div {
   float: right;
 }
 
-#review_bar div #last_page_btn {
+#review-bar div #last-page-btn {
   margin-right: 5px;
 }
 
-#dialog_container {
+#dialog-container {
   display: none;
   align-items: center;
   justify-content: center;
@@ -139,19 +139,19 @@ a:hover {
   background-color: white;
 }
 
-#dialog_header {
+#dialog-header {
   background-color: rgb(85, 85, 85);
   padding: 0 20px;
 }
 
-#dialog_header_title {
+#dialog-header-title {
   height: 40px;
   line-height: 40px;
   font-size: 20px;
   color: white;
 }
 
-#dialog_content {
+#dialog-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,25 +159,25 @@ a:hover {
   padding: 20px;
 }
 
-#dialog_content div {
+#dialog-content div {
   font-weight: bold;
   margin: auto;
 }
 
-#dialog_content div label {
+#dialog-content div label {
   margin-right: 20px;
 }
 
-#dialog_content div input {
+#dialog-content div input {
   width: 200px;
 }
 
-#dialog_control_bar {
+#dialog-control-bar {
   float: right;
   height: 60px;
   padding: 10px 30px;
 }
 
-#dialog_control_bar #confirm_btn {
+#dialog-control-bar #confirm-btn {
   margin-right: 5px;
 }

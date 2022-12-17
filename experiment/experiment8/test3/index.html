@@ -40,11 +40,11 @@
   </head>
   <body>
     <div id="btns">
-      <button id="select_all">全选</button>
-      <button id="cancel_select">取消选择</button>
-      <button id="select_reverse">反选</button>
+      <button id="select-all">全选</button>
+      <button id="cancel-select">取消选择</button>
+      <button id="select-reverse">反选</button>
     </div>
-    <div id="table_box">
+    <div id="table-box">
       <table id="table">
         <tr>
           <th>编号</th>
@@ -92,11 +92,11 @@
     </div>
     <script>
       $(function () {
-        $('button#select_all').click(function () {
+        $('button#select-all').click(function () {
           $('tr.m').addClass('selected')
         })
 
-        $('button#cancel_select').click(function () {
+        $('button#cancel-select').click(function () {
           $('tr.m').removeClass('selected')
         })
 
@@ -104,7 +104,7 @@
           $(this).toggleClass('selected')
         })
 
-        $('button#select_reverse').click(function () {
+        $('button#select-reverse').click(function () {
           $('tr.m').toggleClass('selected')
         })
         $('tr.m').hover(

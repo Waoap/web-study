@@ -52,7 +52,7 @@ $(function () {
   })
 
   $('input#submit').click(function () {
-    if ($('div.prompt.pass').length !== $('div.input_box.required').length) {
+    if ($('div.prompt.pass').length !== $('div.input-box.required').length) {
       alert('验证不通过')
       return
     } else {

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test 2</title>
     <style>
-      #options_boxes {
+      #options-boxes {
         clear: both;
       }
 
-      #options_boxes > div {
+      #options-boxes > div {
         float: left;
         display: flex;
         flex-direction: column;
@@ -18,35 +18,35 @@
         margin: 0 20px;
       }
 
-      #options_boxes > div > div {
+      #options-boxes > div > div {
         border: 3px inset;
         width: 150px;
         height: 250px;
         margin: 0 20px 20px;
       }
 
-      #options_boxes > div > div > .option.selected {
+      #options-boxes > div > div > .option.selected {
         background-color: blue;
         color: white;
       }
 
-      #options_boxes > div > button {
+      #options-boxes > div > button {
         display: block;
         border: none;
         margin: 5px;
         padding: 10px;
       }
 
-      #options_boxes > div > button:active {
+      #options-boxes > div > button:active {
         background-color: silver;
       }
     </style>
     <script src="../a-public-scripts/jquery-3.6.1.min.js"></script>
   </head>
   <body>
-    <div id="options_boxes">
+    <div id="options-boxes">
       <div id="left">
-        <div id="left_box">
+        <div id="left-box">
           <div class="option">选项1</div>
           <div class="option">选项2</div>
           <div class="option">选项3</div>
@@ -56,13 +56,13 @@
           <div class="option">选项7</div>
           <div class="option">选项8</div>
         </div>
-        <button id="add_selected">选中添加到右边&gt;&gt;</button>
-        <button id="add_all">全部添加到右边&gt;&gt;</button>
+        <button id="add-selected">选中添加到右边&gt;&gt;</button>
+        <button id="add-all">全部添加到右边&gt;&gt;</button>
       </div>
       <div id="right">
-        <div id="right_box"></div>
-        <button id="remove_selected">&lt;&lt;选中删除到左边</button>
-        <button id="remove_all">&lt;&lt;全部删除到左边</button>
+        <div id="right-box"></div>
+        <button id="remove-selected">&lt;&lt;选中删除到左边</button>
+        <button id="remove-all">&lt;&lt;全部删除到左边</button>
       </div>
     </div>
     <script>
@@ -85,14 +85,14 @@
 
           switch (box) {
             case 'l':
-              let lOption = $('div#left_box div.option')
+              let lOption = $('div#left-box div.option')
               lOption.sort(compare)
-              lOption.detach().appendTo('div#left_box')
+              lOption.detach().appendTo('div#left-box')
               break
             case 'r':
-              let rOption = $('div#right_box div.option')
+              let rOption = $('div#right-box div.option')
               rOption.sort(compare)
-              rOption.detach().appendTo('div#right_box')
+              rOption.detach().appendTo('div#right-box')
           }
         }
 
@@ -102,42 +102,42 @@
         })
 
         // 选中添加到右边
-        $('button#add_selected').click(function () {
-          let option = $('div#left_box div.option.selected')
+        $('button#add-selected').click(function () {
+          let option = $('div#left-box div.option.selected')
 
           if (option.length === 0) return
 
-          $('div#right_box').append(option.removeClass('selected'))
+          $('div#right-box').append(option.removeClass('selected'))
           sortOptions('r')
         })
 
         // 全部添加到右边
-        $('button#add_all').click(function () {
-          let option = $('div#left_box div.option')
+        $('button#add-all').click(function () {
+          let option = $('div#left-box div.option')
 
           if (option.length === 0) return
 
-          $('div#right_box').append(option.removeClass('selected'))
+          $('div#right-box').append(option.removeClass('selected'))
           sortOptions('r')
         })
 
         // 选中删除到左边
-        $('button#remove_selected').click(function () {
-          let option = $('div#right_box div.option.selected')
+        $('button#remove-selected').click(function () {
+          let option = $('div#right-box div.option.selected')
 
           if (option.length === 0) return
 
-          $('div#left_box').append(option.removeClass('selected'))
+          $('div#left-box').append(option.removeClass('selected'))
           sortOptions('l')
         })
 
         // 全部删除到左边
-        $('button#remove_all').click(function () {
-          let option = $('div#right_box div.option')
+        $('button#remove-all').click(function () {
+          let option = $('div#right-box div.option')
 
           if (option.length === 0) return
 
-          $('div#left_box').append(option.removeClass('selected'))
+          $('div#left-box').append(option.removeClass('selected'))
           sortOptions('l')
         })
       })

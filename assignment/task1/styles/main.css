@@ -3,46 +3,46 @@
   padding: 0;
 }
 
-.text_holder {
+.text-holder {
   background-color: rgb(33, 33, 33);
   color: gray;
   font-size: 30px;
   text-align: center;
 }
 
-.tool_bar,
-.content_row {
+.tool-bar,
+.content-row {
   width: 1200px;
 }
 
-.tool_bar {
+.tool-bar {
   height: 200px;
   line-height: 200px;
   margin: 0 auto;
 }
 
-.content_row {
+.content-row {
   height: 500px;
   line-height: 500px;
   margin: 10px auto;
 }
-.content_row .main {
+.content-row .main {
   width: calc(70% - 5px);
 }
-.content_row .sidebar {
+.content-row .sidebar {
   width: calc(30% - 5px);
 }
 
-.right_sidebar .main {
+.right-sidebar .main {
   float: left;
 }
-.right_sidebar .sidebar {
+.right-sidebar .sidebar {
   float: right;
 }
 
-.left_sidebar .main {
+.left-sidebar .main {
   float: right;
 }
-.left_sidebar .sidebar {
+.left-sidebar .sidebar {
   float: left;
 }

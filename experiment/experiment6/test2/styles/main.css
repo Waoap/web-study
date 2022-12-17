@@ -48,14 +48,14 @@ body {
   right: 25px;
 }
 
-#imgs_box {
+#imgs-box {
   position: absolute;
   display: flex;
   width: 2400px;
   height: 450px;
 }
 
-#imgs_box img {
+#imgs-box img {
   width: 1200px;
   height: 450px;
 }

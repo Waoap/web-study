@@ -4,142 +4,142 @@
   margin: 0px;
 }
 
-.form_header .form_header_title,
-.form_row,
-.form_row .form_row_title,
-.form_row .form_row_input_area {
+.form-header .form-header-title,
+.form-row,
+.form-row .form-row-title,
+.form-row .form-row-input-area {
   display: flex;
   align-items: center;
 }
 
-.form_header .form_header_title {
+.form-header .form-header-title {
   background-color: rgb(243, 243, 243);
 }
 
-.form_header .form_header_title .form_header_title {
+.form-header .form-header-title .form-header-title {
   font-size: larger;
   padding: 15px 5px 15px 20px;
 }
 
-.form_header .form_header_title .form_header_title_helper,
-.form_row .form_row_title .form_row_title_helper {
+.form-header .form-header-title .form-header-title-helper,
+.form-row .form-row-title .form-row-title-helper {
   height: 20px;
   width: 20px;
 }
 
-.form_header .form_header_title .form_header_title_prompt {
+.form-header .form-header-title .form-header-title-prompt {
   color: gray;
   margin-left: 20px;
 }
 
-.form_header .form_header_title .form_header_custom_element {
+.form-header .form-header-title .form-header-custom-element {
   position: absolute;
   right: 25px;
 }
 
-.form_row {
+.form-row {
   margin-top: 60px;
 }
 
-.form_row_lite {
+.form-row-lite {
   margin-top: 40px;
 }
 
-.form_row .form_row_title {
+.form-row .form-row-title {
   position: absolute;
   right: 85%;
 }
 
-.form_row .form_row_title .form_row_not_null {
+.form-row .form-row-title .form-row-not-null {
   color: red;
   margin: 0px 5px;
 }
 
-.form_row .form_row_title .form_row_title_helper {
+.form-row .form-row-title .form-row-title-helper {
   margin-left: 5px;
   margin-right: 10px;
 }
 
-.form_row .form_row_input_area {
+.form-row .form-row-input-area {
   position: absolute;
   left: 16%;
 }
 
-.form_row .form_row_input_area .form_row_input_prompt {
+.form-row .form-row-input-area .form-row-input-prompt {
   color: gray;
 }
 
-.form_row .form_row_input_area .form_row_input_link:link,
-.form_row .form_row_input_area .form_row_input_link:visited {
+.form-row .form-row-input-area .form-row-input-link:link,
+.form-row .form-row-input-area .form-row-input-link:visited {
   text-decoration: none;
 }
 
-.form_row .form_row_input_area .form_row_input_link:hover {
+.form-row .form-row-input-area .form-row-input-link:hover {
   text-decoration: underline;
 }
 
-.form_row .form_row_input_area .form_row_text_input,
-.form_row .form_row_input_area .form_row_button_input {
+.form-row .form-row-input-area .form-row-text-input,
+.form-row .form-row-input-area .form-row-button-input {
   margin: 10px 10px 10px 0px;
   padding: 5px;
 }
 
-.form_row .form_row_input_area .form_row_text_input {
+.form-row .form-row-input-area .form-row-text-input {
   width: 200px;
 }
 
-.form_row .form_row_input_area .form_row_radio_input_label,
-.form_row .form_row_input_area .form_row_checkbox_input_label {
+.form-row .form-row-input-area .form-row-radio-input-label,
+.form-row .form-row-input-area .form-row-checkbox-input-label {
   margin-right: 20px;
   margin-left: 10px;
 }
 
-.form_row .form_row_input_area .form_row_button_input {
+.form-row .form-row-input-area .form-row-button-input {
   flex-wrap: wrap;
 }
 
-.form_row .form_row_input_area .form_row_select {
+.form-row .form-row-input-area .form-row-select {
   width: 180px;
   padding-block: 5px;
 }
 
-.form_footer {
+.form-footer {
   margin-block: 70px;
 }
 
-#product_name,
-#product_trade_port {
+#product-name,
+#product-trade-port {
   width: 300px;
 }
 
-#min_order_quantity,
-#product_min_order_quantity_unit,
-#FOB_price,
-#FOB_price_unit {
+#min-order-quantity,
+#product-min-order-quantity-unit,
+#FOB-price,
+#FOB-price-unit {
   width: 100px;
 }
 
-#rich_text_product_description_editor_holder {
+#rich-text-product-description-editor-holder {
   height: 400px;
 }
 
-#rich_text_product_description_editor {
+#rich-text-product-description-editor {
   width: 1000px;
   height: 400px;
   visibility: hidden;
 }
 
-#form_row_title_inline_right {
+#form-row-title-inline-right {
   right: 45.5%;
 }
 
-#form_row_input_area_inline_right {
+#form-row-input-area-inline-right {
   left: 55%;
 }
 
-#product_show_field_customization
-  .form_row
-  .form_row_input_area
-  .form_row_checkbox_input_label {
+#product-show-field-customization
+  .form-row
+  .form-row-input-area
+  .form-row-checkbox-input-label {
   width: 70px;
 }

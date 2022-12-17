@@ -63,9 +63,9 @@ const students = [undefined]
 const fullPageSelectedStatus = [undefined]
 
 const tbody = document.getElementById('table').children[0]
-const fullPageSelectedBox = document.getElementById('full_page_selected_box')
-const studentCountViewer = document.getElementById('student_count_viewer')
-const currentPageViewer = document.getElementById('current_page_viewer')
+const fullPageSelectedBox = document.getElementById('full-page-selected-box')
+const studentCountViewer = document.getElementById('student-count-viewer')
+const currentPageViewer = document.getElementById('current-page-viewer')
 
 // 当前所在/展示的页码，有效索引从 1 开始
 let currentPage = 1
@@ -98,7 +98,7 @@ function updateTable() {
     i++
   ) {
     let tr = document.createElement('tr')
-    tr.id = 'student_' + i
+    tr.id = 'student-' + i
     tr.className = 'info'
     tr.innerHTML = `<td>
             <input
@@ -124,18 +124,18 @@ function updateTable() {
   studentCountViewer.textContent = students.length - 1
 }
 
-const dialogContainer = document.getElementById('dialog_container')
+const dialogContainer = document.getElementById('dialog-container')
 
 let dialogType = unset // -> [ 'unset', 'add', 'review', 'modify' ]
 
 // 新增学生
-document.getElementById('add_btn').onclick = function () {
+document.getElementById('add-btn').onclick = function () {
   dialogType = 'add'
   dialogContainer.style.display = 'flex'
 }
 
 // 删除选中的学生
-document.getElementById('remove_btn').onclick = function () {
+document.getElementById('remove-btn').onclick = function () {
   let hasChecked
   for (let i = 1; i < students.length; i++) {
     if (students[i].checked) {
@@ -189,7 +189,7 @@ fullPageSelectedBox.onclick = function () {
   updateTable()
 }
 
-const dialogContent = document.getElementById('dialog_content')
+const dialogContent = document.getElementById('dialog-content')
 
 // 当前操作（查看/修改）的学生（数组元素）
 let currentOperatedStudent = students[0]
@@ -198,7 +198,7 @@ let currentOperatedStudent = students[0]
 tbody.addEventListener('click', function (e) {
   if (
     (e.target.tagName !== 'INPUT' ||
-      e.target.id === 'full_page_selected_box') &&
+      e.target.id === 'full-page-selected-box') &&
     e.target.tagName !== 'A'
   ) {
     return
@@ -238,7 +238,7 @@ tbody.addEventListener('click', function (e) {
 })
 
 // 展示上一页信息
-document.getElementById('last_page_btn').onclick = function () {
+document.getElementById('last-page-btn').onclick = function () {
   if (currentPage === 1) {
     alert('已经是第一页！')
   } else {
@@ -248,7 +248,7 @@ document.getElementById('last_page_btn').onclick = function () {
 }
 
 // 展示下一页信息
-document.getElementById('next_page_btn').onclick = function () {
+document.getElementById('next-page-btn').onclick = function () {
   if (currentPage === parseInt((students.length - 2) / 10) + 1) {
     alert('已经是最后一页！')
   } else {
@@ -258,7 +258,7 @@ document.getElementById('next_page_btn').onclick = function () {
 }
 
 // 对话框确认
-document.getElementById('confirm_btn').onclick = function () {
+document.getElementById('confirm-btn').onclick = function () {
   if (dialogType === 'add') {
     // 添加类型的对话框，即对话框用于获取添加的学生信息
     let newStudent = new Student()
@@ -381,7 +381,7 @@ document.getElementById('confirm_btn').onclick = function () {
 }
 
 // 取消对话框
-document.getElementById('cancel_btn').onclick = function () {
+document.getElementById('cancel-btn').onclick = function () {
   // 操作完成后重置对话框
   // 查看类型的对话框，重置禁用状态
   if (dialogType === 'review') {

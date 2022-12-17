@@ -16,11 +16,11 @@
         margin: 50px;
       }
 
-      .tab_menu {
+      .tab-menu {
         clear: both;
       }
 
-      .tab_menu li {
+      .tab-menu li {
         float: left;
         text-align: center;
         cursor: pointer;
@@ -32,16 +32,16 @@
         border-bottom: none;
       }
 
-      .tab_menu li.hover {
+      .tab-menu li.hover {
         background-color: #dfdfdf;
       }
 
-      .tab_menu li.selected {
+      .tab-menu li.selected {
         color: white;
         background-color: #6d84b4;
       }
 
-      .tab_box {
+      .tab-box {
         clear: both;
         border: 1px solid #898989;
         width: 300px;
@@ -54,10 +54,9 @@
     </style>
     <script src="../a-public-scripts/jquery-3.6.1.min.js"></script>
   </head>
-
   <body>
     <div class="tab">
-      <div class="tab_menu">
+      <div class="tab-menu">
         <ul>
           <li class="selected">新闻</li>
           <li>财经</li>
@@ -65,19 +64,19 @@
         </ul>
       </div>
     </div>
-    <div class="tab_box">
+    <div class="tab-box">
       <div>新闻信息</div>
       <div class="hide">财经信息</div>
       <div class="hide">视频信息</div>
     </div>
     <script>
       $(function () {
-        let $div_li = $('div.tab_menu ul li')
-        $div_li
+        let $li = $('div.tab-menu ul li')
+        $li
           .click(function () {
             $(this).addClass('selected').siblings().removeClass('selected')
-            let index = $div_li.index(this)
-            $('div.tab_box > div').eq(index).show().siblings().hide()
+            let index = $li.index(this)
+            $('div.tab-box > div').eq(index).show().siblings().hide()
           })
           .hover(
             function () {

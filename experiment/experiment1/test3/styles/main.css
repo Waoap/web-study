@@ -19,40 +19,40 @@ iframe {
   text-align: left;
 }
 
-.frame_sets_html,
-.frame_sets_body {
+.frame-sets-html,
+.frame-sets-body {
   height: 100%;
 }
 
-.top_frame {
+.top-frame {
   width: 100%;
   height: 150px;
 }
 
-.left_frame {
+.left-frame {
   float: left;
   width: calc(20% - 4px);
   height: calc(100% - 154px);
 }
 
-.right_frame {
+.right-frame {
   float: right;
   width: calc(80% - 4px);
   height: calc(100% - 154px);
 }
 
-.header_title {
+.header-title {
   text-align: center;
   font-size: 54px;
 }
 
-.navigation_title {
+.navigation-title {
   font-size: 35px;
   margin-top: 60px;
   margin-bottom: 30px;
 }
 
-.navigation_link {
+.navigation-link {
   display: block;
   font-size: 30px;
   font-weight: bold;

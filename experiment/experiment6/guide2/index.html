@@ -15,7 +15,7 @@
       }
     </style>
     <script>
-      let checkboxes = document.getElementsByName('check_hobby')
+      let checkboxes = document.getElementsByName('check-hobby')
 
       function selectAll() {
         for (const checkbox of checkboxes) {
@@ -40,16 +40,16 @@
     <form>
       <fieldset>
         <legend>爱好</legend>
-        <input type="checkbox" name="check_hobby" id="surf_the_internet" />
-        <label for="surf_the_internet">上网</label>
-        <input type="checkbox" name="check_hobby" id="read" />
+        <input type="checkbox" name="check-hobby" id="surf-the-internet" />
+        <label for="surf-the-internet">上网</label>
+        <input type="checkbox" name="check-hobby" id="read" />
         <label for="read">阅读</label>
-        <input type="checkbox" name="check_hobby" id="play_games" />
-        <label for="play_games">玩游戏</label>
-        <input type="checkbox" name="check_hobby" id="exercise" />
+        <input type="checkbox" name="check-hobby" id="play-games" />
+        <label for="play-games">玩游戏</label>
+        <input type="checkbox" name="check-hobby" id="exercise" />
         <label for="exercise">锻炼</label>
-        <input type="checkbox" name="check_hobby" id="go_shopping" />
-        <label for="go_shopping">购物</label>
+        <input type="checkbox" name="check-hobby" id="go-shopping" />
+        <label for="go-shopping">购物</label>
       </fieldset>
       <input type="button" value="全选" onclick="selectAll()" />
       <input type="button" value="反选" onclick="selectReverse()" />

@@ -12,81 +12,81 @@
   <body>
     <div id="content">
       <div id="menu">
-        <div id="all_products" class="menu_item select">
-          <a href="info-all.html" target="info_container">全部产品</a>
+        <div id="all-products" class="menu-item select">
+          <a href="info-all.html" target="info-container">全部产品</a>
         </div>
-        <div id="various_products" class="menu_item">
-          <a href="javascript:void(0);" id="best_bite" target="info_container">
+        <div id="various-products" class="menu-item">
+          <a href="javascript:void(0);" id="best-bite" target="info-container">
             百滋百特
           </a>
-          <div class="pop_menu_decoration"></div>
+          <div class="pop-menu-decoration"></div>
         </div>
-        <div class="pop_menu">
-          <div class="pop_menu_item select">
-            <a href="info-various-donuts.html" target="info_container">
+        <div class="pop-menu">
+          <div class="pop-menu-item select">
+            <a href="info-various-donuts.html" target="info-container">
               美味甜甜圈
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-cheesecake.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-cheesecake.html" target="info-container">
               芝士蛋糕
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-puff.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-puff.html" target="info-container">
               闪电泡芙
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-donuts2.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-donuts2.html" target="info-container">
               慕斯甜甜圈
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-softbagel.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-softbagel.html" target="info-container">
               软欧圈
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-muffinbagel.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-muffinbagel.html" target="info-container">
               麦芬圈
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-pastrybagel.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-pastrybagel.html" target="info-container">
               起酥圈
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-regularcake.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-regularcake.html" target="info-container">
               常规蛋糕
             </a>
           </div>
-          <div class="pop_menu_item">
-            <a href="info-various-fruitjuice.html" target="info_container">
+          <div class="pop-menu-item">
+            <a href="info-various-fruitjuice.html" target="info-container">
               果汁饮料
             </a>
           </div>
         </div>
       </div>
       <iframe
-        id="info_container"
-        name="info_container"
+        id="info-container"
+        name="info-container"
         class="container"
         src="info-all.html"
         frameborder="0"></iframe>
     </div>
     <script>
       $(function () {
-        $('#best_bite').click(function () {
-          $('.pop_menu_item.select a')[0].click()
+        $('#best-bite').click(function () {
+          $('.pop-menu-item.select a')[0].click()
         })
 
-        $('.menu_item').click(function () {
+        $('.menu-item').click(function () {
           $(this).addClass('select').siblings().removeClass('select')
         })
 
-        $('.pop_menu_item').click(function () {
+        $('.pop-menu-item').click(function () {
           $(this).addClass('select').siblings().removeClass('select')
         })
       })

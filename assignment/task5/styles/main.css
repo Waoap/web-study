@@ -2,7 +2,7 @@ body {
   margin: 20px;
 }
 
-@keyframes jump_up_down {
+@keyframes jump-up-down {
   0% {
     transform: translate(0, 0) scale(0.9) rotate(0);
     box-shadow: -20px -20px 20px gray;
@@ -36,5 +36,5 @@ body {
   width: 200px;
   height: 200px;
   background-color: black;
-  animation: jump_up_down 8s ease-in-out infinite;
+  animation: jump-up-down 8s ease-in-out infinite;
 }

@@ -2,7 +2,7 @@
  * 轮播图
  * from:L1 to:L113
  */
-const IMAGES_BOX = document.getElementById('imgs_box')
+const IMAGES_BOX = document.getElementById('imgs-box')
 const IMAGES_SIZE = IMAGES_BOX.childElementCount
 const IMAGE_WIDTH = 1200
 

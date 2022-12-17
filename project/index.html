@@ -11,18 +11,18 @@
     <script src="scripts/jquery.easing.1.3.min.js"></script>
   </head>
   <body>
-    <div id="nav" class="tool_bar">
-      <img class="background" src="images/nav_bg.png" alt="nav_bg" />
-      <div class="tool_bar_left">
-        <div class="nav_item select">
+    <div id="nav" class="tool-bar">
+      <img class="background" src="images/nav-bg.png" alt="nav-bg" />
+      <div class="tool-bar-left">
+        <div class="nav-item select">
           <a target="container" href="pages/home-page.html">首页</a>
         </div>
-        <div class="nav_item">
+        <div class="nav-item">
           <a target="container" href="pages/brands-and-products.html">
             品牌和产品
           </a>
         </div>
-        <div class="nav_item">
+        <div class="nav-item">
           <a target="container" href="pages/joint-venture-cooperation.html">
             联营合作
           </a>
@@ -31,36 +31,36 @@
       <div class="logo">
         <img
           class="background"
-          src="images/logo_bg.png"
+          src="images/logo-bg.png"
           alt="Logo Background" />
-        <div class="logo_title">耀炎食品</div>
+        <div class="logo-title">耀炎食品</div>
       </div>
-      <div class="tool_bar_right">
-        <div class="nav_item">
+      <div class="tool-bar-right">
+        <div class="nav-item">
           <a target="container" href="pages/supporting-services.html">
             配套服务
           </a>
         </div>
-        <div class="nav_item">
+        <div class="nav-item">
           <a target="container" href="pages/store-information.html">门店信息</a>
         </div>
-        <div class="nav_item">
+        <div class="nav-item">
           <a target="container" href="pages/about.html">关于我们</a>
-          <div class="nav_pop">
-            <div class="nav_pop_item">
+          <div class="nav-pop">
+            <div class="nav-pop-item">
               <a target="container" href="pages/about.html">企业</a>
             </div>
-            <div class="nav_pop_item">
+            <div class="nav-pop-item">
               <a target="container" href="pages/about.html">关于我们</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="nav_chooser"></div>
+      <div id="nav-chooser"></div>
     </div>
     <div id="slideshow">
-      <div id="images_box">
+      <div id="images-box">
         <img src="images/info1.png" alt="" />
         <img src="images/info2.png" alt="" />
       </div>
@@ -77,11 +77,11 @@
       name="container"
       src="pages/home-page.html"
       frameborder="0"></iframe>
-    <div id="footer" class="tool_bar">
-      <img class="background" src="images/footer_bg.png" alt="footer_bg" />
-      <div class="tool_bar_left">
-        <img class="m_logo" src="images/mlogo.png" alt="m_logo" />
-        <div id="company_info">
+    <div id="footer" class="tool-bar">
+      <img class="background" src="images/footer-bg.png" alt="footer-bg" />
+      <div class="tool-bar-left">
+        <img class="m-logo" src="images/mlogo.png" alt="m-logo" />
+        <div id="company-info">
           <p>重庆耀炎食品有限公司</p>
           <p>地址：重庆市渝中区龙湖时代天街C馆17栋</p>
           <p>耀炎食品 &copy; 版权所有</p>
@@ -90,11 +90,11 @@
       <div class="logo">
         <img
           class="background"
-          src="images/logo_bg.png"
+          src="images/logo-bg.png"
           alt="Logo Background" />
-        <div class="logo_title">耀炎食品</div>
+        <div class="logo-title">耀炎食品</div>
       </div>
-      <div class="tool_bar_right">
+      <div class="tool-bar-right">
         <div id="contact">
           <div id="user">
             <img src="images/user.png" alt="user" />
@@ -110,15 +110,15 @@
     <script>
       $(function () {
         // 导航栏悬浮效果
-        $('.nav_item').hover(
+        $('.nav-item').hover(
           function () {
             if (
               $(this).hasClass('select') ||
-              $(this).children('.nav_pop').length !== 0
+              $(this).children('.nav-pop').length !== 0
             ) {
               return
             }
-            $('#nav_chooser')
+            $('#nav-chooser')
               .stop()
               .css({
                 opacity: 0.25,
@@ -135,13 +135,14 @@
               .show()
           },
           function () {
-            $('#nav_chooser').stop().width(0).hide()
+            $('#nav-chooser').stop().width(0).hide()
           }
         )
 
         // 导航栏点击效果
-        $('.nav_item').click(function () {
-          $(this).addClass('select').siblings().removeClass('select')
+        $('.nav-item').click(function () {
+          $('.nav-item.select').removeClass('select')
+          $(this).addClass('select')
           window.setTimeout(function () {
             $('html').animate(
               {

@@ -1,5 +1,5 @@
 /* *高度层级 */
-#nav .nav_item .nav_pop {
+#nav .nav-item .nav-pop {
   z-index: 100;
 }
 
@@ -7,20 +7,20 @@
   z-index: 50;
 }
 
-#nav .nav_item,
-#nav #nav_chooser,
-#footer .m_logo,
-#footer #company_info,
+#nav .nav-item,
+#nav #nav-chooser,
+#footer .m-logo,
+#footer #company-info,
 #footer #contact {
   z-index: 5;
 }
 
-.tool_bar .tool_bar_bg {
+.tool-bar .tool-bar-bg {
   z-index: 1;
 }
 
 /* *页面主元素宽度 */
-.tool_bar,
+.tool-bar,
 #slideshow,
 #container {
   width: 1366px;
@@ -41,7 +41,7 @@
   height: 90px;
 }
 
-.logo .logo_title {
+.logo .logo-title {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -53,7 +53,7 @@
 }
 
 /* *导航栏和底栏 */
-.tool_bar {
+.tool-bar {
   position: relative;
   display: flex;
   align-items: center;
@@ -61,13 +61,13 @@
   background-color: rgb(101, 54, 10);
 }
 
-.tool_bar .tool_bar_left {
+.tool-bar .tool-bar-left {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
 }
 
-.tool_bar .tool_bar_right {
+.tool-bar .tool-bar-right {
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
@@ -78,7 +78,7 @@
   height: 100px;
 }
 
-#nav #nav_chooser {
+#nav #nav-chooser {
   display: none;
   position: absolute;
   bottom: 0;
@@ -87,7 +87,7 @@
   background-color: white;
 }
 
-#nav .nav_item > a {
+#nav .nav-item > a {
   display: block;
   text-shadow: 0 0 20px;
   text-align: center;
@@ -95,28 +95,28 @@
   padding: 0 40px;
 }
 
-#nav .nav_item.select > a {
+#nav .nav-item.select > a {
   background-color: white;
   color: rgb(147, 79, 14);
 }
 
-#nav .nav_item .nav_pop {
+#nav .nav-item .nav-pop {
   display: none;
   position: absolute;
   top: 100px;
 }
 
-#nav .nav_item:has(:hover) .nav_pop {
+#nav .nav-item:has(:hover) .nav-pop {
   display: block;
 }
 
-#nav .nav_item .nav_pop_item {
+#nav .nav-item .nav-pop-item {
   height: 50px;
   width: 175px;
   overflow: hidden;
 }
 
-#nav .nav_item .nav_pop_item a {
+#nav .nav-item .nav-pop-item a {
   display: block;
   line-height: 50px;
   text-align: center;
@@ -124,7 +124,7 @@
   background-color: white;
 }
 
-#nav .nav_item .nav_pop_item a:hover {
+#nav .nav-item .nav-pop-item a:hover {
   color: white;
   background-color: rgb(145, 83, 27);
 }
@@ -158,14 +158,14 @@
   right: 25px;
 }
 
-#slideshow #images_box {
+#slideshow #images-box {
   position: absolute;
   display: flex;
   width: 200%;
   height: 100%;
 }
 
-#slideshow #images_box img {
+#slideshow #images-box img {
   width: 1366px;
   height: 651px;
 }
@@ -180,7 +180,7 @@
   height: 120px;
 }
 
-#footer .m_logo {
+#footer .m-logo {
   position: absolute;
   left: 194px;
   top: 30px;
@@ -188,13 +188,13 @@
   height: 61px;
 }
 
-#footer #company_info {
+#footer #company-info {
   position: absolute;
   left: 317px;
   top: 30px;
 }
 
-#footer #company_info p {
+#footer #company-info p {
   font-size: 13px;
   color: rgb(233, 233, 233);
   line-height: 1.5;

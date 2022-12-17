@@ -1,6 +1,6 @@
-# web-study
+# Web Study
 
-web 学习
+web 学习存档。
 
 ## 1. assignment —— 小综测作业
 
