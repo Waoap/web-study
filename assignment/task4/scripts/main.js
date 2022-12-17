@@ -61,4 +61,15 @@ $(function () {
             alert('注册成功，密码已发到你的邮箱，请查收。')
         }
     })
+
+    $('input#reset').click(function () {
+        $('input#username')
+            .removeClass('forbid pass')
+            .siblings()
+            .remove('div.prompt')
+        $('input#email')
+            .removeClass('forbid pass')
+            .siblings()
+            .remove('div.prompt')
+    })
 })
