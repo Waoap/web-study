@@ -7,7 +7,7 @@
     <title>Guide 3</title>
     <style>
       * {
-        font-family: "微软雅黑";
+        font-family: '微软雅黑';
         font-size: 14px;
       }
 
@@ -62,11 +62,11 @@
       function setCurrentTab(index) {
         for (let i = 1; i <= 8; i++) {
           if (i == index) {
-            document.getElementById("slide_" + i).className = "current";
-            document.getElementById("tab_" + i).style.display = "block";
+            document.getElementById('slide_' + i).className = 'current'
+            document.getElementById('tab_' + i).style.display = 'block'
           } else {
-            document.getElementById("slide_" + i).className = "";
-            document.getElementById("tab_" + i).style.display = "none";
+            document.getElementById('slide_' + i).className = ''
+            document.getElementById('tab_' + i).style.display = 'none'
           }
         }
       }

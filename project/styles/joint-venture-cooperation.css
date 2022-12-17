@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: "FZPWJW";
-  src: url("../fonts/FZPWJW.ttf");
+  font-family: 'FZPWJW';
+  src: url('../fonts/FZPWJW.ttf');
 }
 
 #content #content_prompt {
@@ -22,7 +22,7 @@
   height: 106px;
   line-height: 106px;
   font-size: 48px;
-  font-family: "FZPWJW";
+  font-family: 'FZPWJW';
   color: rgb(143, 82, 25);
   background-color: rgb(247, 246, 244);
   text-align: center;

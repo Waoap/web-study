@@ -9,39 +9,39 @@
   <body>
     <script>
       let user = {
-        name: "Waoap",
+        name: 'Waoap',
         size: {
           height: 185,
           weight: 75,
         },
-      };
-      let id = Symbol("id");
-      user[id] = 1;
+      }
+      let id = Symbol('id')
+      user[id] = 1
 
       function cloneDeep(obj) {
-        let newObj = obj.constructor === Array ? [] : {};
-        if (typeof obj !== "object") {
-          return;
+        let newObj = obj.constructor === Array ? [] : {}
+        if (typeof obj !== 'object') {
+          return
         } else {
           for (var i in obj) {
-            if (typeof obj[i] === "object") {
-              newObj[i] = cloneDeep(obj[i]);
+            if (typeof obj[i] === 'object') {
+              newObj[i] = cloneDeep(obj[i])
             } else {
-              newObj[i] = obj[i];
+              newObj[i] = obj[i]
             }
           }
         }
-        return newObj;
+        return newObj
       }
 
-      let cloneUser = cloneDeep(user);
-      cloneUser.size.height = 190;
-      cloneUser.size.weight = 80;
-      cloneUser.name = "Nop";
-      cloneUser[id] = 2;
+      let cloneUser = cloneDeep(user)
+      cloneUser.size.height = 190
+      cloneUser.size.weight = 80
+      cloneUser.name = 'Nop'
+      cloneUser[id] = 2
 
-      alert(user[id] + ": " + JSON.stringify(user));
-      alert(cloneUser[id] + ": " + JSON.stringify(cloneUser));
+      alert(user[id] + ': ' + JSON.stringify(user))
+      alert(cloneUser[id] + ': ' + JSON.stringify(cloneUser))
     </script>
   </body>
 </html>

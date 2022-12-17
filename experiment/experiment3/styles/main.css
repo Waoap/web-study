@@ -1,5 +1,5 @@
 body {
-  font-family: "微软雅黑";
+  font-family: '微软雅黑';
   margin: 0;
 }
 
@@ -14,7 +14,7 @@ a:hover {
 
 .clearfix::after {
   display: block;
-  content: "";
+  content: '';
   clear: both;
 }
 

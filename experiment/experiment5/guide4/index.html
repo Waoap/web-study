@@ -14,17 +14,17 @@
           weight: 75,
         },
         set fullName(value) {
-          let parts = value.split(" ");
-          this.firstName = parts[0];
-          this.lastName = parts[1];
+          let parts = value.split(' ')
+          this.firstName = parts[0]
+          this.lastName = parts[1]
         },
         get fullName() {
-          return this.firstName + " " + this.lastName;
+          return this.firstName + ' ' + this.lastName
         },
-      };
-      alert("old: " + JSON.stringify(user));
-      user.fullName = "Waoap Xxx";
-      alert("new: " + JSON.stringify(user));
+      }
+      alert('old: ' + JSON.stringify(user))
+      user.fullName = 'Waoap Xxx'
+      alert('new: ' + JSON.stringify(user))
     </script>
   </body>
 </html>

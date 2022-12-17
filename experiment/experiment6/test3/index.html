@@ -135,29 +135,29 @@
     </div>
     <script>
       let tbody = document
-        .getElementById("box")
-        .getElementsByTagName("tbody")[0];
+        .getElementById('box')
+        .getElementsByTagName('tbody')[0]
       tbody.onclick = function (e) {
-        let box;
-        if (e.target.tagName == "TD") box = e.target;
-        else if (e.target.tagName == "P" || e.target.tagName == "H3")
-          box = e.target.parentNode;
-        else return;
+        let box
+        if (e.target.tagName == 'TD') box = e.target
+        else if (e.target.tagName == 'P' || e.target.tagName == 'H3')
+          box = e.target.parentNode
+        else return
 
         if (!box.originalBackgroundColor)
-          box.originalBackgroundColor = getComputedStyle(box).backgroundColor;
-        if (!box.originalColor) box.originalColor = getComputedStyle(box).color;
+          box.originalBackgroundColor = getComputedStyle(box).backgroundColor
+        if (!box.originalColor) box.originalColor = getComputedStyle(box).color
 
         if (!box.clicked) {
-          box.style.backgroundColor = "red";
-          box.style.color = "white";
-          box.clicked = true;
+          box.style.backgroundColor = 'red'
+          box.style.color = 'white'
+          box.clicked = true
         } else {
-          box.style.background = box.originalBackgroundColor;
-          box.style.color = box.originalColor;
-          box.clicked = false;
+          box.style.background = box.originalBackgroundColor
+          box.style.color = box.originalColor
+          box.clicked = false
         }
-      };
+      }
     </script>
   </body>
 </html>

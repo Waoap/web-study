@@ -10,28 +10,28 @@
         margin: 20px;
       }
 
-      input[type="button"] {
+      input[type='button'] {
         margin: 5px 15px;
       }
     </style>
     <script>
-      let checkboxes = document.getElementsByName("check_hobby");
+      let checkboxes = document.getElementsByName('check_hobby')
 
       function selectAll() {
         for (const checkbox of checkboxes) {
-          checkbox.checked = true;
+          checkbox.checked = true
         }
       }
 
       function selectReverse() {
         for (const checkbox of checkboxes) {
-          checkbox.checked = !checkbox.checked;
+          checkbox.checked = !checkbox.checked
         }
       }
 
       function selectNone() {
         for (const checkbox of checkboxes) {
-          checkbox.checked = false;
+          checkbox.checked = false
         }
       }
     </script>

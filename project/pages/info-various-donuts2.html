@@ -167,16 +167,16 @@
     </div>
     <script>
       $(function () {
-        $(".item").click(function () {
-          if ($(this).children(".item_title").css("visibility") === "visible") {
-            $(this).children(".item_title").css({ visibility: "hidden" });
-            $(this).children(".item_content").css({ visibility: "hidden" });
+        $('.item').click(function () {
+          if ($(this).children('.item_title').css('visibility') === 'visible') {
+            $(this).children('.item_title').css({ visibility: 'hidden' })
+            $(this).children('.item_content').css({ visibility: 'hidden' })
           } else {
-            $(this).children(".item_title").css({ visibility: "visible" });
-            $(this).children(".item_content").css({ visibility: "visible" });
+            $(this).children('.item_title').css({ visibility: 'visible' })
+            $(this).children('.item_content').css({ visibility: 'visible' })
           }
-        });
-      });
+        })
+      })
     </script>
   </body>
 </html>

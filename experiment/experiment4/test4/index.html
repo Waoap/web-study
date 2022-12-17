@@ -9,41 +9,41 @@
       function dayInZH(day) {
         switch (day) {
           case 0:
-            return "星期日";
+            return '星期日'
           case 1:
-            return "星期一";
+            return '星期一'
           case 2:
-            return "星期二";
+            return '星期二'
           case 3:
-            return "星期三";
+            return '星期三'
           case 4:
-            return "星期四";
+            return '星期四'
           case 5:
-            return "星期五";
+            return '星期五'
           case 6:
-            return "星期六";
+            return '星期六'
         }
-        return "错误星期数";
+        return '错误星期数'
       }
 
-      let dateNow = new Date();
+      let dateNow = new Date()
       document.write(
-        "今天的日期是：" +
+        '今天的日期是：' +
           dateNow.getFullYear() +
-          "年" +
+          '年' +
           (dateNow.getMonth() + 1) +
-          "月" +
+          '月' +
           dateNow.getDate() +
-          "日&emsp;" +
+          '日&emsp;' +
           dayInZH(dateNow.getDay()) +
-          "&emsp;现在时间是：" +
+          '&emsp;现在时间是：' +
           dateNow.getHours() +
-          "时" +
+          '时' +
           dateNow.getMinutes() +
-          "分" +
+          '分' +
           dateNow.getSeconds() +
-          "秒"
-      );
+          '秒'
+      )
     </script>
   </head>
   <body></body>

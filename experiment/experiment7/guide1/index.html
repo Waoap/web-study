@@ -10,17 +10,17 @@
     <script>
       function verifyEmail(email) {
         return (
-          email != "" &&
-          email.indexOf("@") > 0 &&
-          email.indexOf("@") == email.lastIndexOf("@") &&
-          email.indexOf(".") > email.indexOf("@") + 1 &&
-          email.lastIndexOf(".") != length - 1
-        );
+          email != '' &&
+          email.indexOf('@') > 0 &&
+          email.indexOf('@') == email.lastIndexOf('@') &&
+          email.indexOf('.') > email.indexOf('@') + 1 &&
+          email.lastIndexOf('.') != length - 1
+        )
       }
 
-      let email = "chenxian660@gmail.com";
+      let email = 'chenxian660@gmail.com'
       // let email1 = '.aa@abc.com'
-      document.write(verifyEmail(email));
+      document.write(verifyEmail(email))
     </script>
   </body>
 </html>

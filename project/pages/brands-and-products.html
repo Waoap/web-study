@@ -74,23 +74,22 @@
         name="info_container"
         class="container"
         src="info-all.html"
-        frameborder="0"
-      ></iframe>
+        frameborder="0"></iframe>
     </div>
     <script>
       $(function () {
-        $("#best_bite").click(function () {
-          $(".pop_menu_item.select a")[0].click();
-        });
+        $('#best_bite').click(function () {
+          $('.pop_menu_item.select a')[0].click()
+        })
 
-        $(".menu_item").click(function () {
-          $(this).addClass("select").siblings().removeClass("select");
-        });
+        $('.menu_item').click(function () {
+          $(this).addClass('select').siblings().removeClass('select')
+        })
 
-        $(".pop_menu_item").click(function () {
-          $(this).addClass("select").siblings().removeClass("select");
-        });
-      });
+        $('.pop_menu_item').click(function () {
+          $(this).addClass('select').siblings().removeClass('select')
+        })
+      })
     </script>
     <script src="../scripts/autosize-iframes.js"></script>
   </body>

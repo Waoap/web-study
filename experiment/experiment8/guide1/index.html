@@ -11,30 +11,30 @@
     <div id="resText"></div>
     <script>
       function ajax() {
-        let request = null;
+        let request = null
         if (window.ActiveXObject) {
-          request = new ActiveXObject("Microsoft.XMLHTTP");
+          request = new ActiveXObject('Microsoft.XMLHTTP')
         } else if (window.XMLHttpRequest) {
-          request = new XMLHttpRequest();
+          request = new XMLHttpRequest()
         }
 
         function doRequest() {
           if (request.readyState === 4) {
             if (request.status === 200) {
-              document.getElementById("resText").innerHTML =
-                request.responseText;
+              document.getElementById('resText').innerHTML =
+                request.responseText
             }
           }
         }
 
         if (request != null) {
           request.open(
-            "GET",
-            "https://jsonplaceholder.typicode.com/todos/1",
+            'GET',
+            'https://jsonplaceholder.typicode.com/todos/1',
             true
-          );
-          request.onreadystatechange = doRequest;
-          request.send(null);
+          )
+          request.onreadystatechange = doRequest
+          request.send(null)
         }
       }
     </script>

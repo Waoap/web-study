@@ -32,8 +32,7 @@
         <img
           class="background"
           src="images/logo_bg.png"
-          alt="Logo Background"
-        />
+          alt="Logo Background" />
         <div class="logo_title">耀炎食品</div>
       </div>
       <div class="tool_bar_right">
@@ -43,18 +42,16 @@
           </a>
         </div>
         <div class="nav_item">
-          <a target="container" href="pages/store-information.html">
-            门店信息
-          </a>
+          <a target="container" href="pages/store-information.html">门店信息</a>
         </div>
         <div class="nav_item">
           <a target="container" href="pages/about.html">关于我们</a>
           <div class="nav_pop">
             <div class="nav_pop_item">
-              <a target="container" href="pages/about.html"> 企业 </a>
+              <a target="container" href="pages/about.html">企业</a>
             </div>
             <div class="nav_pop_item">
-              <a target="container" href="pages/about.html"> 关于我们 </a>
+              <a target="container" href="pages/about.html">关于我们</a>
             </div>
           </div>
         </div>
@@ -71,8 +68,7 @@
         id="previous"
         class="btn display"
         src="images/previous.png"
-        alt="previous"
-      />
+        alt="previous" />
       <img id="next" class="btn display" src="images/next.png" alt="next" />
     </div>
     <iframe
@@ -80,8 +76,7 @@
       class="container"
       name="container"
       src="pages/home-page.html"
-      frameborder="0"
-    ></iframe>
+      frameborder="0"></iframe>
     <div id="footer" class="tool_bar">
       <img class="background" src="images/footer_bg.png" alt="footer_bg" />
       <div class="tool_bar_left">
@@ -96,8 +91,7 @@
         <img
           class="background"
           src="images/logo_bg.png"
-          alt="Logo Background"
-        />
+          alt="Logo Background" />
         <div class="logo_title">耀炎食品</div>
       </div>
       <div class="tool_bar_right">
@@ -116,15 +110,15 @@
     <script>
       $(function () {
         // 导航栏悬浮效果
-        $(".nav_item").hover(
+        $('.nav_item').hover(
           function () {
             if (
-              $(this).hasClass("select") ||
-              $(this).children(".nav_pop").length !== 0
+              $(this).hasClass('select') ||
+              $(this).children('.nav_pop').length !== 0
             ) {
-              return;
+              return
             }
-            $("#nav_chooser")
+            $('#nav_chooser')
               .stop()
               .css({
                 opacity: 0.25,
@@ -133,31 +127,31 @@
               .animate(
                 {
                   opacity: 1,
-                  width: [$(this).outerWidth(), "easeInOutQuart"],
-                  left: [$(this).position().left, "easeInOutQuart"],
+                  width: [$(this).outerWidth(), 'easeInOutQuart'],
+                  left: [$(this).position().left, 'easeInOutQuart'],
                 },
                 400
               )
-              .show();
+              .show()
           },
           function () {
-            $("#nav_chooser").stop().width(0).hide();
+            $('#nav_chooser').stop().width(0).hide()
           }
-        );
+        )
 
         // 导航栏点击效果
-        $(".nav_item").click(function () {
-          $(this).addClass("select").siblings().removeClass("select");
+        $('.nav_item').click(function () {
+          $(this).addClass('select').siblings().removeClass('select')
           window.setTimeout(function () {
-            $("html").animate(
+            $('html').animate(
               {
-                scrollTop: [$("#container").offset().top, "easeInOutQuart"],
+                scrollTop: [$('#container').offset().top, 'easeInOutQuart'],
               },
               1000
-            );
-          }, 100);
-        });
-      });
+            )
+          }, 100)
+        })
+      })
     </script>
     <script src="scripts/index.js"></script>
     <script src="scripts/autosize-iframes.js"></script>

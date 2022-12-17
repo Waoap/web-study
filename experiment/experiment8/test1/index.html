@@ -88,22 +88,22 @@
     </div>
     <script>
       $(function () {
-        $("button#select_all").click(function () {
-          $("tr.m").addClass("selected");
-        });
+        $('button#select_all').click(function () {
+          $('tr.m').addClass('selected')
+        })
 
-        $("button#cancel_select").click(function () {
-          $("tr.m").removeClass("selected");
-        });
+        $('button#cancel_select').click(function () {
+          $('tr.m').removeClass('selected')
+        })
 
-        $("tr.m").click(function () {
-          $(this).toggleClass("selected");
-        });
+        $('tr.m').click(function () {
+          $(this).toggleClass('selected')
+        })
 
-        $("button#select_reverse").click(function () {
-          $("tr.m").toggleClass("selected");
-        });
-      });
+        $('button#select_reverse').click(function () {
+          $('tr.m').toggleClass('selected')
+        })
+      })
     </script>
   </body>
 </html>

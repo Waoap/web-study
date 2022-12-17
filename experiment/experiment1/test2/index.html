@@ -14,8 +14,8 @@
       KindEditor.ready(function (K) {
         K.create('textarea[name="rich_content"]', {
           resizeType: 0,
-        });
-      });
+        })
+      })
     </script>
     <!-- kind editor -->
   </head>
@@ -39,8 +39,7 @@
             class="form_row_text_input"
             type="text"
             form="product_basic_info"
-            placeholder="如：PU女士手提包（CK12002）"
-          />
+            placeholder="如：PU女士手提包（CK12002）" />
         </div>
       </div>
       <div class="form_row">
@@ -53,8 +52,7 @@
             id="product_model"
             class="form_row_text_input"
             type="text"
-            form="product_basic_info"
-          />
+            form="product_basic_info" />
         </div>
       </div>
       <div class="form_row">
@@ -71,12 +69,10 @@
             form="product_basic_info"
             value="single_product_picture_mode"
             name="upload_product_picture_mode"
-            checked="true"
-          />
+            checked="true" />
           <label
             for="single_product_picture_mode"
-            class="form_row_radio_input_label"
-          >
+            class="form_row_radio_input_label">
             上传单张图片
           </label>
           <input
@@ -85,12 +81,10 @@
             type="radio"
             form="product_basic_info"
             value="multi_product_picture_mode"
-            name="upload_product_picture_mode"
-          />
+            name="upload_product_picture_mode" />
           <label
             for="multi_product_picture_mode"
-            class="form_row_radio_input_label"
-          >
+            class="form_row_radio_input_label">
             上传多张图片
           </label>
           <span class="form_row_input_prompt">
@@ -106,16 +100,14 @@
             type="button"
             form="product_basic_info"
             value="本地上传"
-            name="upload_product_picture_from_where"
-          />
+            name="upload_product_picture_from_where" />
           <input
             id="upload_product_picture_from_picture_library"
             class="form_row_button_input"
             type="button"
             form="product_basic_info"
             value="从图片库选取"
-            name="upload_product_picture_from_where"
-          />
+            name="upload_product_picture_from_where" />
         </div>
       </div>
       <div class="form_row">
@@ -137,8 +129,7 @@
             id="product_keyword"
             class="form_row_text_input"
             type="text"
-            form="product_basic_info"
-          />
+            form="product_basic_info" />
           <a class="form_row_input_link" href="#">关键词建议</a>
         </div>
       </div>
@@ -166,8 +157,7 @@
             class="form_row_button_input"
             type="button"
             form="product_basic_info"
-            value="选择目录"
-          />
+            value="选择目录" />
           <span class="form_row_input_prompt">
             找不到想要的目录？
             <a href="#" class="form_row_input_link"> 点这里 </a>
@@ -184,8 +174,7 @@
             id="product_group"
             class="form_row_select"
             form="product_basic_info"
-            title="product_group"
-          >
+            title="product_group">
             <option value="none" selected="true">请选择产品组</option>
             <option value="group_one">产品组一</option>
             <option value="group_two">产品组二</option>
@@ -206,12 +195,10 @@
             form="product_basic_info"
             value="rich_text_product_description_type"
             name="product_description_type"
-            checked="true"
-          />
+            checked="true" />
           <label
             for="rich_text_product_description_type"
-            class="form_row_radio_input_label"
-          >
+            class="form_row_radio_input_label">
             富文本
           </label>
           <input
@@ -220,12 +207,10 @@
             type="radio"
             form="product_basic_info"
             value="plain_product_description_text_type"
-            name="product_description_type"
-          />
+            name="product_description_type" />
           <label
             for="plain_text_product_description_type"
-            class="form_row_radio_input_label"
-          >
+            class="form_row_radio_input_label">
             纯文本
           </label>
           <span class="form_row_input_prompt">
@@ -237,8 +222,7 @@
         <div class="form_row_input_area">
           <textarea
             id="rich_text_product_description_editor"
-            name="rich_content"
-          >
+            name="rich_content">
           </textarea>
         </div>
       </div>
@@ -260,8 +244,7 @@
           <img
             class="form_header_title_helper"
             src="images/help.png"
-            alt="help"
-          />
+            alt="help" />
           <span class="form_header_title_prompt">
             详细填写您的报价，让其更易被买家关注。
           </span>
@@ -271,8 +254,7 @@
               type="checkbox"
               form="product_trade"
               value="product_trade_success"
-              name="product_trade_success"
-            />
+              name="product_trade_success" />
             <label for="product_trade_success">可洽谈</label>
           </div>
         </div>
@@ -288,14 +270,12 @@
             id="min_order_quantity"
             class="form_row_text_input"
             type="text"
-            form="product_trade"
-          />
+            form="product_trade" />
           <select
             id="product_min_order_quantity_unit"
             class="form_row_select"
             form="product_trade"
-            title="product_min_order_quantity_unit"
-          >
+            title="product_min_order_quantity_unit">
             <option value="pcs">个</option>
             <option value="dozen">打</option>
           </select>
@@ -309,14 +289,12 @@
             id="FOB_price"
             class="form_row_text_input"
             type="text"
-            form="product_trade"
-          />
+            form="product_trade" />
           <select
             id="FOB_price_unit"
             class="form_row_select"
             form="product_trade"
-            title="FOB_price_unit"
-          >
+            title="FOB_price_unit">
             <option value="pcs">个</option>
             <option value="dozen">打</option>
           </select>
@@ -337,8 +315,7 @@
             id="product_trade_port"
             class="form_row_text_input"
             type="text"
-            form="product_trade"
-          />
+            form="product_trade" />
         </div>
       </div>
       <div class="form_row">
@@ -353,12 +330,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_L/C"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_L/C"
-          >
+            for="product_payment_method_L/C">
             L/C
           </label>
           <input
@@ -367,12 +342,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_T/T"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_T/T"
-          >
+            for="product_payment_method_T/T">
             T/T
           </label>
           <input
@@ -381,12 +354,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_D/P"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_D/P"
-          >
+            for="product_payment_method_D/P">
             D/P
           </label>
           <input
@@ -395,12 +366,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_Paypal"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_Paypal"
-          >
+            for="product_payment_method_Paypal">
             Paypal
           </label>
           <input
@@ -409,12 +378,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_Money_Gram"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_Money_Gram"
-          >
+            for="product_payment_method_Money_Gram">
             Money Gram
           </label>
           <input
@@ -423,12 +390,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_Western_Union"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_Western_Union"
-          >
+            for="product_payment_method_Western_Union">
             Western Union
           </label>
           <input
@@ -437,12 +402,10 @@
             type="checkbox"
             form="product_trade"
             value="product_payment_method_Others"
-            name="product_payment_method"
-          />
+            name="product_payment_method" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_Others"
-          >
+            for="product_payment_method_Others">
             Others
           </label>
         </div>
@@ -456,8 +419,7 @@
           <img
             class="form_header_title_helper"
             src="images/help.png"
-            alt="help"
-          />
+            alt="help" />
           <span class="form_header_title_prompt">
             可以从产品属性、自定义属性、交易条件中选择2个自定义信息用于展示厅产品介绍页面的优先展示。
           </span>
@@ -475,12 +437,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_port_terms_of_transaction"
-            name="product_terms_of_transaction"
-          />
+            name="product_terms_of_transaction" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_port_terms_of_transaction"
-          >
+            for="product_port_terms_of_transaction">
             港口
           </label>
           <input
@@ -489,12 +449,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_payment_method_terms_of_transaction"
-            name="product_terms_of_transaction"
-          />
+            name="product_terms_of_transaction" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_payment_method_terms_of_transaction"
-          >
+            for="product_payment_method_terms_of_transaction">
             支付方式
           </label>
         </div>
@@ -510,12 +468,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_appearance_property"
-            name="product_property"
-          />
+            name="product_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_appearance_property"
-          >
+            for="product_appearance_property">
             外观
           </label>
           <input
@@ -524,12 +480,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_application_property"
-            name="product_property"
-          />
+            name="product_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_application_property"
-          >
+            for="product_application_property">
             应用 </label
           ><input
             id="product_composition_property"
@@ -537,12 +491,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_composition_property"
-            name="product_property"
-          />
+            name="product_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_composition_property"
-          >
+            for="product_composition_property">
             成分
           </label>
           <input
@@ -551,12 +503,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_target_market_property"
-            name="product_property"
-          />
+            name="product_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_target_market_property"
-          >
+            for="product_target_market_property">
             目标市场
           </label>
         </div>
@@ -572,12 +522,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_FOB_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_FOB_property"
-          >
+            for="product_FOB_property">
             FOB
           </label>
           <input
@@ -586,12 +534,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_CFR_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_CFR_property"
-          >
+            for="product_CFR_property">
             CFR
           </label>
           <input
@@ -600,12 +546,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_CIF_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_CIF_property"
-          >
+            for="product_CIF_property">
             CIF
           </label>
           <input
@@ -614,12 +558,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_DAT_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_DAT_property"
-          >
+            for="product_DAT_property">
             DAT
           </label>
           <input
@@ -628,12 +570,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_FAS_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_FAS_property"
-          >
+            for="product_FAS_property">
             FAS
           </label>
           <input
@@ -642,12 +582,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_DDP_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_DDP_property"
-          >
+            for="product_DDP_property">
             DDP
           </label>
           <input
@@ -656,12 +594,10 @@
             type="checkbox"
             form="product_show_field_customization"
             value="product_DAP_property"
-            name="product_customization_property"
-          />
+            name="product_customization_property" />
           <label
             class="form_row_checkbox_input_label"
-            for="product_DAP_property"
-          >
+            for="product_DAP_property">
             DAP
           </label>
         </div>

@@ -9,18 +9,18 @@
   <body>
     <script>
       let user = {
-        name: "Waoap",
-      };
-      alert("user name: " + user?.name);
+        name: 'Waoap',
+      }
+      alert('user name: ' + user?.name)
 
-      let id = Symbol("id");
+      let id = Symbol('id')
       user[id] = {
         studentId: 2,
         courseId: 1,
-      };
-      alert("user [id]: " + user?.[id]?.studentId);
-      alert("user id: " + user?.id?.studentId);
-      alert("user: " + JSON.stringify(user));
+      }
+      alert('user [id]: ' + user?.[id]?.studentId)
+      alert('user id: ' + user?.id?.studentId)
+      alert('user: ' + JSON.stringify(user))
     </script>
   </body>
 </html>

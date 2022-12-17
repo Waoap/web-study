@@ -9,9 +9,9 @@
   <body>
     <span id="clock"></span>
     <script>
-      let interval = setInterval("clock()", 50);
+      let interval = setInterval('clock()', 50)
       function clock() {
-        document.getElementById("clock").innerText = new Date();
+        document.getElementById('clock').innerText = new Date()
       }
     </script>
     <button onclick="clearInterval(interval)">Stop interval</button>

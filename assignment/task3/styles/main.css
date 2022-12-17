@@ -15,12 +15,12 @@ button {
   width: 90px;
 }
 
-button[class="green_bg_btn"] {
+button[class='green_bg_btn'] {
   color: white;
   background-color: rgb(92, 184, 92);
 }
 
-button[class="red_bg_btn"] {
+button[class='red_bg_btn'] {
   color: white;
   background-color: rgb(217, 83, 79);
 }

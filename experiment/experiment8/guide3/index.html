@@ -72,22 +72,22 @@
     </div>
     <script>
       $(function () {
-        let $div_li = $("div.tab_menu ul li");
+        let $div_li = $('div.tab_menu ul li')
         $div_li
           .click(function () {
-            $(this).addClass("selected").siblings().removeClass("selected");
-            let index = $div_li.index(this);
-            $("div.tab_box > div").eq(index).show().siblings().hide();
+            $(this).addClass('selected').siblings().removeClass('selected')
+            let index = $div_li.index(this)
+            $('div.tab_box > div').eq(index).show().siblings().hide()
           })
           .hover(
             function () {
-              $(this).addClass("hover");
+              $(this).addClass('hover')
             },
             function () {
-              $(this).removeClass("hover");
+              $(this).removeClass('hover')
             }
-          );
-      });
+          )
+      })
     </script>
   </body>
 </html>

@@ -8,23 +8,23 @@
   </head>
   <body>
     <script>
-      "use strict";
+      'use strict'
       function askPassword(user) {
-        let password = prompt("Password?", "");
-        if (password == "rockstar") user.loginOk();
-        else user.loginFail();
+        let password = prompt('Password?', '')
+        if (password == 'rockstar') user.loginOk()
+        else user.loginFail()
       }
       let user = {
-        name: "John",
+        name: 'John',
         loginOk() {
-          alert(`${this.name} logged in`);
+          alert(`${this.name} logged in`)
         },
 
         loginFail() {
-          alert(`${this.name} failed to log in`);
+          alert(`${this.name} failed to log in`)
         },
-      };
-      askPassword(user);
+      }
+      askPassword(user)
     </script>
   </body>
 </html>

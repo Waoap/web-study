@@ -112,58 +112,58 @@
     </div>
     <script>
       $(function () {
-        let imgsCount = $(".info_img").length;
-        $(".img_counter").each(function (index, elem) {
-          elem.textContent = index + 1 + "/" + imgsCount;
-        });
+        let imgsCount = $('.info_img').length
+        $('.img_counter').each(function (index, elem) {
+          elem.textContent = index + 1 + '/' + imgsCount
+        })
 
-        let imgs = new Array();
-        $(".info_img").each(function (index, elem) {
-          imgs.push(elem.getAttribute("src"));
-        });
+        let imgs = new Array()
+        $('.info_img').each(function (index, elem) {
+          imgs.push(elem.getAttribute('src'))
+        })
 
-        $(".info_img").hover(
+        $('.info_img').hover(
           function () {
-            $(this).siblings(".img_counter").show();
+            $(this).siblings('.img_counter').show()
           },
           function () {
-            $(this).siblings(".img_counter").hide();
+            $(this).siblings('.img_counter').hide()
           }
-        );
+        )
 
-        $(".info_img").click(function () {
-          $("#img_viewer_content").attr({ src: $(this).attr("src") });
-          $("#img_viewer")
-            .attr({ index: imgs.indexOf($(this).attr("src")) })
-            .show();
-        });
+        $('.info_img').click(function () {
+          $('#img_viewer_content').attr({ src: $(this).attr('src') })
+          $('#img_viewer')
+            .attr({ index: imgs.indexOf($(this).attr('src')) })
+            .show()
+        })
 
-        $("#previous_img").click(function () {
-          let index = parseInt($("#img_viewer").attr("index"));
+        $('#previous_img').click(function () {
+          let index = parseInt($('#img_viewer').attr('index'))
           if (index === 0) {
-            index = imgsCount - 1;
+            index = imgsCount - 1
           } else {
-            index--;
+            index--
           }
-          $("#img_viewer").attr({ index: index });
-          $("#img_viewer_content").attr({ src: imgs[index] });
-        });
+          $('#img_viewer').attr({ index: index })
+          $('#img_viewer_content').attr({ src: imgs[index] })
+        })
 
-        $("#next_img").click(function () {
-          let index = parseInt($("#img_viewer").attr("index"));
+        $('#next_img').click(function () {
+          let index = parseInt($('#img_viewer').attr('index'))
           if (index === imgsCount - 1) {
-            index = 0;
+            index = 0
           } else {
-            index++;
+            index++
           }
-          $("#img_viewer").attr({ index: index });
-          $("#img_viewer_content").attr({ src: imgs[index] });
-        });
+          $('#img_viewer').attr({ index: index })
+          $('#img_viewer_content').attr({ src: imgs[index] })
+        })
 
-        $("#close_img").click(function () {
-          $("#img_viewer").hide();
-        });
-      });
+        $('#close_img').click(function () {
+          $('#img_viewer').hide()
+        })
+      })
     </script>
   </body>
 </html>

@@ -9,36 +9,36 @@
   <body>
     <!DOCTYPE html>
     <script>
-      "use strict";
+      'use strict'
       // 对 worker.slow 的结果进行缓存
       let worker = {
         someMethod() {
-          return 1;
+          return 1
         },
 
         slow(x) {
           // 可怕的 CPU 过载任务
-          alert("Called with " + x);
-          return x * this.someMethod(); // (*)
+          alert('Called with ' + x)
+          return x * this.someMethod() // (*)
         },
-      };
+      }
 
       // 透明缓存
       function cachingDecorator(func) {
-        let cache = new Map();
+        let cache = new Map()
         return function (x) {
           if (cache.has(x)) {
-            return cache.get(x);
+            return cache.get(x)
           }
-          let result = func.call(this, x); // (**)
+          let result = func.call(this, x) // (**)
           // let result = func(x)
-          cache.set(x, result);
-          return result;
-        };
+          cache.set(x, result)
+          return result
+        }
       }
-      alert(worker.slow(1)); // 原始方法有效
-      worker.slow = cachingDecorator(worker.slow); // 现在对其进行缓存
-      alert(worker.slow(2)); // Error: Cannot read property 'someMethod' of undefined
+      alert(worker.slow(1)) // 原始方法有效
+      worker.slow = cachingDecorator(worker.slow) // 现在对其进行缓存
+      alert(worker.slow(2)) // Error: Cannot read property 'someMethod' of undefined
     </script>
   </body>
 </html>

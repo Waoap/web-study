@@ -8,23 +8,23 @@
     <script>
       function Hamster() {
         this.run = function () {
-          alert("跑得慢");
-        };
+          alert('跑得慢')
+        }
       }
       Hamster.prototype.run = function () {
-        alert("跑得快");
-      };
+        alert('跑得快')
+      }
 
-      let lazy = new Hamster();
+      let lazy = new Hamster()
 
-      let speedy = new lazy.constructor();
+      let speedy = new lazy.constructor()
       speedy.run = function () {
-        alert("跑得很快");
-      };
+        alert('跑得很快')
+      }
 
-      speedy.run();
-      lazy.run();
-      lazy.__proto__.run();
+      speedy.run()
+      lazy.run()
+      lazy.__proto__.run()
     </script>
   </head>
   <body></body>
