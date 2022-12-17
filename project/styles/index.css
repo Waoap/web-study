@@ -1,10 +1,10 @@
 /* *高度层级 */
 #nav .nav_item .nav_pop {
-    z-index: 100;
+  z-index: 100;
 }
 
 .logo {
-    z-index: 50;
+  z-index: 50;
 }
 
 #nav .nav_item,
@@ -12,212 +12,212 @@
 #footer .m_logo,
 #footer #company_info,
 #footer #contact {
-    z-index: 5;
+  z-index: 5;
 }
 
 .tool_bar .tool_bar_bg {
-    z-index: 1;
+  z-index: 1;
 }
 
 /* *页面主元素宽度 */
 .tool_bar,
 #slideshow,
 #container {
-    width: 1366px;
-    margin: 0 auto;
+  width: 1366px;
+  margin: 0 auto;
 }
 
 /* *背景（工具栏和 logo 的背景） */
 .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 /* *logo */
 .logo {
-    position: relative;
-    width: 90px;
-    height: 90px;
+  position: relative;
+  width: 90px;
+  height: 90px;
 }
 
 .logo .logo_title {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    line-height: 90px;
-    font-size: 20px;
-    font-family: 'STXingkai';
-    text-align: center;
-    color: rgb(203, 166, 132);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 90px;
+  font-size: 20px;
+  font-family: "STXingkai";
+  text-align: center;
+  color: rgb(203, 166, 132);
 }
 
 /* *导航栏和底栏 */
 .tool_bar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(101, 54, 10);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(101, 54, 10);
 }
 
 .tool_bar .tool_bar_left {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
 
 .tool_bar .tool_bar_right {
-    display: flex;
-    justify-content: flex-start;
-    flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 /* *导航栏 */
 #nav {
-    height: 100px;
+  height: 100px;
 }
 
 #nav #nav_chooser {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    height: 5px;
-    width: 175px;
-    background-color: white;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  width: 175px;
+  background-color: white;
 }
 
 #nav .nav_item > a {
-    display: block;
-    text-shadow: 0 0 20px;
-    text-align: center;
-    line-height: 100px;
-    padding: 0 40px;
+  display: block;
+  text-shadow: 0 0 20px;
+  text-align: center;
+  line-height: 100px;
+  padding: 0 40px;
 }
 
 #nav .nav_item.select > a {
-    background-color: white;
-    color: rgb(147, 79, 14);
+  background-color: white;
+  color: rgb(147, 79, 14);
 }
 
 #nav .nav_item .nav_pop {
-    display: none;
-    position: absolute;
-    top: 100px;
+  display: none;
+  position: absolute;
+  top: 100px;
 }
 
 #nav .nav_item:has(:hover) .nav_pop {
-    display: block;
+  display: block;
 }
 
 #nav .nav_item .nav_pop_item {
-    height: 50px;
-    width: 175px;
-    overflow: hidden;
+  height: 50px;
+  width: 175px;
+  overflow: hidden;
 }
 
 #nav .nav_item .nav_pop_item a {
-    display: block;
-    line-height: 50px;
-    text-align: center;
-    color: black;
-    background-color: white;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  color: black;
+  background-color: white;
 }
 
 #nav .nav_item .nav_pop_item a:hover {
-    color: white;
-    background-color: rgb(145, 83, 27);
+  color: white;
+  background-color: rgb(145, 83, 27);
 }
 
 /* *轮播图 */
 #slideshow {
-    position: relative;
-    height: 651px;
-    background-color: rgb(252, 228, 212);
-    overflow: hidden;
+  position: relative;
+  height: 651px;
+  background-color: rgb(252, 228, 212);
+  overflow: hidden;
 }
 
 #slideshow .btn {
-    display: none;
-    position: absolute;
-    width: 25px;
-    cursor: pointer;
+  display: none;
+  position: absolute;
+  width: 25px;
+  cursor: pointer;
 }
 
 #slideshow:has(:hover) .btn.display {
-    display: block;
+  display: block;
 }
 
 #slideshow #previous {
-    top: calc(50% - 12.5px);
-    left: 25px;
+  top: calc(50% - 12.5px);
+  left: 25px;
 }
 
 #slideshow #next {
-    top: calc(50% - 12.5px);
-    right: 25px;
+  top: calc(50% - 12.5px);
+  right: 25px;
 }
 
 #slideshow #images_box {
-    position: absolute;
-    display: flex;
-    width: 200%;
-    height: 100%;
+  position: absolute;
+  display: flex;
+  width: 200%;
+  height: 100%;
 }
 
 #slideshow #images_box img {
-    width: 1366px;
-    height: 651px;
+  width: 1366px;
+  height: 651px;
 }
 
 /* *内容容器 */
 #container {
-    display: block;
+  display: block;
 }
 
 /* *底栏 */
 #footer {
-    height: 120px;
+  height: 120px;
 }
 
 #footer .m_logo {
-    position: absolute;
-    left: 194px;
-    top: 30px;
-    width: 93px;
-    height: 61px;
+  position: absolute;
+  left: 194px;
+  top: 30px;
+  width: 93px;
+  height: 61px;
 }
 
 #footer #company_info {
-    position: absolute;
-    left: 317px;
-    top: 30px;
+  position: absolute;
+  left: 317px;
+  top: 30px;
 }
 
 #footer #company_info p {
-    font-size: 13px;
-    color: rgb(233, 233, 233);
-    line-height: 1.5;
+  font-size: 13px;
+  color: rgb(233, 233, 233);
+  line-height: 1.5;
 }
 
 #footer #contact {
-    position: absolute;
-    left: 910px;
-    top: 30px;
+  position: absolute;
+  left: 910px;
+  top: 30px;
 }
 
 #footer #contact > div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #footer #contact #user {
-    margin-left: 2px;
-    margin-bottom: 20px;
+  margin-left: 2px;
+  margin-bottom: 20px;
 }
 
 #footer #contact > div > div {
-    margin-left: 15px;
-    font-size: 14px;
-    color: rgb(233, 233, 233);
+  margin-left: 15px;
+  font-size: 14px;
+  color: rgb(233, 233, 233);
 }

@@ -1,75 +1,75 @@
 #content {
-    background-color: rgb(247, 246, 244);
-    padding: 35px 0;
+  background-color: rgb(247, 246, 244);
+  padding: 35px 0;
 }
 
 #menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu_item {
-    position: relative;
-    display: inline-block;
-    margin: 0 25px;
+  position: relative;
+  display: inline-block;
+  margin: 0 25px;
 }
 
 .menu_item > a {
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(51, 51, 51);
-    line-height: 1.5;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(51, 51, 51);
+  line-height: 1.5;
 }
 
 .menu_item#various_products.select ~ .pop_menu,
 .menu_item#various_products.select .pop_menu_decoration {
-    display: block;
+  display: block;
 }
 
 .menu_item.select a {
-    color: rgb(13, 144, 254);
+  color: rgb(13, 144, 254);
 }
 
 .menu_item .pop_menu_decoration {
-    display: none;
-    position: absolute;
-    left: 23px;
-    top: 15px;
-    width: 0;
-    height: 0;
-    border: 10px solid;
-    border-color: transparent transparent rgb(13, 144, 254);
+  display: none;
+  position: absolute;
+  left: 23px;
+  top: 15px;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+  border-color: transparent transparent rgb(13, 144, 254);
 }
 
 .pop_menu {
-    display: none;
-    border: 1px solid rgb(13, 144, 254);
-    background-color: rgb(247, 246, 244);
-    position: absolute;
-    top: 70px;
-    height: 38px;
+  display: none;
+  border: 1px solid rgb(13, 144, 254);
+  background-color: rgb(247, 246, 244);
+  position: absolute;
+  top: 70px;
+  height: 38px;
 }
 
 .pop_menu_item {
-    display: inline-block;
-    height: 100%;
-    line-height: 38px;
-    margin: 0 10px;
+  display: inline-block;
+  height: 100%;
+  line-height: 38px;
+  margin: 0 10px;
 }
 
 .pop_menu_item a {
-    font-size: 14px;
-    color: rgb(51, 51, 51);
-    line-height: 1.5;
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+  line-height: 1.5;
 }
 
 .pop_menu_item.select a {
-    color: rgb(238, 112, 35);
+  color: rgb(238, 112, 35);
 }
 
 #info_container {
-    display: block;
-    width: 100%;
-    margin-top: 40px;
+  display: block;
+  width: 100%;
+  margin-top: 40px;
 }
