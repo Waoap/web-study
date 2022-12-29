@@ -8,15 +8,38 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
   </head>
   <body>
-    <div class="tool-bar text-holder">Header</div>
-    <div class="content-row right-sidebar">
-      <div class="main text-holder">Main</div>
-      <div class="sidebar text-holder">Sidebar</div>
+    <!-- class 命名规范 -->
+    <!-- <布局>：.g-xxx -->
+    <!-- 如：.g-header -->
+
+    <!-- <状态>：.s-xxx -->
+    <!-- 用来标记元素的状态 -->
+    <!--    如：.s-selected、.s-current -->
+
+    <!-- <工具>：.u-xxx -->
+    <!-- 表示没有实际意义的工具，比如清除浮动等 -->
+    <!--    如：.u-clearfix、.u-ellipsis -->
+
+    <!-- <组件>：.m-xxx -->
+    <!-- 表示可以复用的组件 -->
+    <!--    如：.m-slider、.m-drop-menu -->
+
+    <!-- <钩子>：.js-xxx -->
+    <!-- 表示用来给 js 调用的类 -->
+    <!--    如：.js-request、.js-open -->
+    <div>
+      <div class="g-bar u-text-holder">Header</div>
+      <div class="g-content">
+        <div class="m-content-row u-right-sidebar">
+          <div class="g-main u-text-holder">Main</div>
+          <div class="g-sidebar u-text-holder">Sidebar</div>
+        </div>
+        <div class="m-content-row u-left-sidebar">
+          <div class="g-sidebar u-text-holder">Sidebar</div>
+          <div class="g-main u-text-holder">Main</div>
+        </div>
+      </div>
+      <div class="g-bar u-text-holder">Footer</div>
     </div>
-    <div class="content-row left-sidebar">
-      <div class="sidebar text-holder">Sidebar</div>
-      <div class="main text-holder">Main</div>
-    </div>
-    <div class="tool-bar text-holder">Footer</div>
   </body>
 </html>

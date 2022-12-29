@@ -1,48 +1,64 @@
+/*
+  css 属性规范：
+    <位置>：position、top、right、z-index、display、float 等；
+
+    <大小>：width、height、padding、margin；
+
+    <文字>：font、line-height、letter-spacing、color、text-align 等；
+
+    <背景>：background、border 等；
+
+    <其他>：animation、transition 等；
+*/
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.text-holder {
-  background-color: rgb(33, 33, 33);
+.u-text-holder {
   color: gray;
   font-size: 30px;
   text-align: center;
+
+  background-color: rgb(33, 33, 33);
 }
 
-.tool-bar,
-.content-row {
+.g-bar,
+.g-content {
   width: 1200px;
-}
-
-.tool-bar {
-  height: 200px;
-  line-height: 200px;
   margin: 0 auto;
 }
 
-.content-row {
-  height: 500px;
-  line-height: 500px;
-  margin: 10px auto;
+.g-bar {
+  height: 200px;
+
+  line-height: 200px;
 }
-.content-row .main {
+
+.m-content-row {
+  height: 500px;
+  margin: 10px auto;
+
+  line-height: 500px;
+}
+.m-content-row .g-main {
   width: calc(70% - 5px);
 }
-.content-row .sidebar {
+.m-content-row .g-sidebar {
   width: calc(30% - 5px);
 }
 
-.right-sidebar .main {
+.u-right-sidebar .g-main {
   float: left;
 }
-.right-sidebar .sidebar {
+.u-right-sidebar .g-sidebar {
   float: right;
 }
 
-.left-sidebar .main {
+.u-left-sidebar .g-main {
   float: right;
 }
-.left-sidebar .sidebar {
+.u-left-sidebar .g-sidebar {
   float: left;
 }
