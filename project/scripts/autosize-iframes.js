@@ -7,9 +7,9 @@ function changeFrameHeight(iframe) {
   iframe.height = iframe.contentDocument.body.scrollHeight + 1
 }
 
-let iframes = document.getElementsByClassName('container')
+let iframes = document.getElementsByClassName('m-container')
 for (const iframe of iframes) {
-  iframe.onload = window.onresize = function () {
+  iframe.onload = function () {
     changeFrameHeight(this)
   }
 }

@@ -1,12 +1,12 @@
 /**
  * 轮播图
- * from:L1 to:L113
  */
-const IMAGES_BOX = document.getElementById('images-box')
+const IMAGES_BOX = document.getElementById('slideshow-images-box')
 const IMAGES_SIZE = IMAGES_BOX.childElementCount
 const IMAGE_WIDTH = 1366
 const MIN_INDEX = 0
 const MAX_INDEX = IMAGES_SIZE - 1
+
 let index = MIN_INDEX
 
 /**
@@ -91,16 +91,20 @@ function move(orientation = 'r2l') {
 /**
  * 播放上一张图片
  */
-document.getElementById('previous').addEventListener('click', function () {
-  move('l2r')
-})
+document
+  .getElementById('slideshow-previous-btn')
+  .addEventListener('click', function () {
+    move('l2r')
+  })
 
 /**
  * 播放下一张图片
  */
-document.getElementById('next').addEventListener('click', function () {
-  move('r2l')
-})
+document
+  .getElementById('slideshow-next-btn')
+  .addEventListener('click', function () {
+    move('r2l')
+  })
 
 /**
  * 自动播放轮播图

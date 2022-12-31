@@ -1,6 +1,7 @@
 #content {
-  background-color: rgb(247, 246, 244);
   padding: 35px 0;
+
+  background-color: rgb(247, 246, 244);
 }
 
 #menu {
@@ -8,68 +9,68 @@
   align-items: center;
   justify-content: center;
 }
-
 .menu-item {
   position: relative;
   display: inline-block;
+
   margin: 0 25px;
 }
-
 .menu-item > a {
   font-size: 16px;
   font-weight: bold;
   color: rgb(51, 51, 51);
   line-height: 1.5;
 }
-
 .menu-item#various-products.select ~ .pop-menu,
 .menu-item#various-products.select .pop-menu-decoration {
   display: block;
 }
-
 .menu-item.select a {
   color: rgb(13, 144, 254);
 }
-
 .menu-item .pop-menu-decoration {
-  display: none;
   position: absolute;
   left: 23px;
   top: 15px;
+  display: none;
+
   width: 0;
   height: 0;
+
   border: 10px solid;
   border-color: transparent transparent rgb(13, 144, 254);
 }
 
 .pop-menu {
-  display: none;
-  border: 1px solid rgb(13, 144, 254);
-  background-color: rgb(247, 246, 244);
   position: absolute;
   top: 70px;
-  height: 38px;
-}
+  display: none;
 
+  height: 38px;
+
+  border: 1px solid rgb(13, 144, 254);
+  background-color: rgb(247, 246, 244);
+}
 .pop-menu-item {
   display: inline-block;
-  height: 100%;
-  line-height: 38px;
-  margin: 0 10px;
-}
 
+  height: 100%;
+  margin: 0 10px;
+
+  line-height: 38px;
+}
 .pop-menu-item a {
   font-size: 14px;
   color: rgb(51, 51, 51);
   line-height: 1.5;
 }
-
 .pop-menu-item.select a {
   color: rgb(238, 112, 35);
 }
 
 #info-container {
   display: block;
+
   width: 100%;
   margin-top: 40px;
 }
