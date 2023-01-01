@@ -58,19 +58,6 @@
         list-style-type: none;
       }
     </style>
-    <script>
-      function setCurrentTab(index) {
-        for (let i = 1; i <= 8; i++) {
-          if (i == index) {
-            document.getElementById('slide-' + i).className = 'current'
-            document.getElementById('tab-' + i).style.display = 'block'
-          } else {
-            document.getElementById('slide-' + i).className = ''
-            document.getElementById('tab-' + i).style.display = 'none'
-          }
-        }
-      }
-    </script>
   </head>
   <body>
     <div id="news-box">
@@ -151,5 +138,18 @@
         </div>
       </div>
     </div>
+    <script>
+      function setCurrentTab(index) {
+        for (let i = 1; i <= 8; i++) {
+          if (i == index) {
+            document.getElementById('slide-' + i).className = 'current'
+            document.getElementById('tab-' + i).style.display = 'block'
+          } else {
+            document.getElementById('slide-' + i).className = ''
+            document.getElementById('tab-' + i).style.display = 'none'
+          }
+        }
+      }
+    </script>
   </body>
 </html>
