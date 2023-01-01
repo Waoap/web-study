@@ -13,12 +13,15 @@
     <div id="content">
       <div id="title">百滋百特</div>
       <div id="info-items">
+        <!-- item -->
         <div class="info-item">
           <p>重庆/龙湖时代天街店—重庆市渝中区龙湖时代天街购物广场C馆L1-55B</p>
           <img class="info-img" src="../images/thumb.png" alt="" />
           <div class="img-counter"></div>
         </div>
+        <!-- 点，配合蓝色长条 div 占位-->
         <img class="item-decoration" src="../images/item.png" alt="" />
+        <!-- 蓝色长条 div，同时实现占位作用 -->
         <div class="item-line item-line-l"></div>
         <div class="info-item">
           <p>重庆/协信星光天地店—重庆市渝中区大坪协信星光天地商场L4-017/018</p>
@@ -112,11 +115,13 @@
     </div>
     <script>
       $(function () {
+        // 给每张图片添加次序信息
         let imgsCount = $('.info-img').length
         $('.img-counter').each(function (index, elem) {
           elem.textContent = index + 1 + '/' + imgsCount
         })
 
+        // 把每张图片存在数组中
         let imgs = new Array()
         $('.info-img').each(function (index, elem) {
           imgs.push(elem.getAttribute('src'))
@@ -131,6 +136,7 @@
           }
         )
 
+        // 图片点击
         $('.info-img').click(function () {
           $('#img-viewer-content').attr({ src: $(this).attr('src') })
           $('#img-viewer')

@@ -54,25 +54,20 @@
   left: 70px;
   border-color: transparent transparent transparent rgb(192, 164, 107);
 }
-
 .service-item.service-item-l2r .service-item-content {
   left: 70px;
 }
-
 .service-item.service-item-l2r .service-item-img {
   left: 600px;
 }
-
 .service-item.service-item-r2l .service-item-title {
   left: 987px;
 }
-
 .service-item.service-item-r2l .service-item-title-decoration {
   top: calc(50% - 8px);
   left: 955px;
   border-color: transparent rgb(192, 164, 107) transparent transparent;
 }
-
 .service-item.service-item-r2l .service-item-content {
   left: 457px;
 }

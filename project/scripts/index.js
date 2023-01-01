@@ -26,9 +26,7 @@ function prepareImages(orientation = 'r2l') {
     case 'l2r':
       // 到达第一个图片时
       if (index === MIN_INDEX) {
-        IMAGES_BOX.prepend(
-          IMAGES_BOX.children[IMAGES_BOX.childElementCount - 1]
-        )
+        IMAGES_BOX.prepend(IMAGES_BOX.children[IMAGES_SIZE - 1])
         index++
         IMAGES_BOX.style.left = -index * IMAGE_WIDTH + 'px'
       }
