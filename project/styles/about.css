@@ -37,13 +37,13 @@
   margin: 0 8.5px;
 }
 
-#content #company-introduction {
+#content #main-content {
   width: 966px;
   height: 296px;
   margin: 0 auto 196px;
 }
 
-#content #company-introduction p {
+#content #main-content p {
   font-size: 16px;
   color: rgb(51, 51, 51);
   text-indent: 2em;

@@ -52,6 +52,7 @@
 .service-item.service-item-l2r .service-item-title-decoration {
   top: calc(50% - 8px);
   left: 70px;
+
   border-color: transparent transparent transparent rgb(192, 164, 107);
 }
 .service-item.service-item-l2r .service-item-content {
@@ -66,6 +67,7 @@
 .service-item.service-item-r2l .service-item-title-decoration {
   top: calc(50% - 8px);
   left: 955px;
+
   border-color: transparent rgb(192, 164, 107) transparent transparent;
 }
 .service-item.service-item-r2l .service-item-content {
