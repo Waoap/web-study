@@ -1,6 +1,5 @@
 /**
  * 轮播图
- * from:L1 to:L113
  */
 const IMAGES_BOX = document.getElementById('imgs-box')
 const IMAGES_SIZE = IMAGES_BOX.childElementCount
@@ -31,9 +30,7 @@ function prepareImages(orientation = 'r2l') {
     case 'l2r':
       // 到达第一个图片时
       if (index === MIN_INDEX) {
-        IMAGES_BOX.prepend(
-          IMAGES_BOX.children[IMAGES_BOX.childElementCount - 1]
-        )
+        IMAGES_BOX.prepend(IMAGES_BOX.children[IMAGES_SIZE - 1])
         index++
         IMAGES_BOX.style.left = -index * IMAGE_WIDTH + 'px'
       }
@@ -94,20 +91,6 @@ function move(orientation = 'r2l') {
 }
 
 /**
- * 播放上一张图片
- */
-document.getElementById('previous').addEventListener('click', function () {
-  move('l2r')
-})
-
-/**
- * 播放下一张图片
- */
-document.getElementById('next').addEventListener('click', function () {
-  move('r2l')
-})
-
-/**
  * 自动播放轮播图
  */
 const play = (PLAY.onclick = function () {
@@ -127,3 +110,17 @@ PAUSE.onclick = function () {
     PLAY.classList.add('display')
   }
 }
+
+/**
+ * 播放上一张图片
+ */
+document.getElementById('previous').addEventListener('click', function () {
+  move('l2r')
+})
+
+/**
+ * 播放下一张图片
+ */
+document.getElementById('next').addEventListener('click', function () {
+  move('r2l')
+})
