@@ -120,14 +120,6 @@
   width: 4px;
   height: 4px;
 }
-.info .item-title.green-color .item-title-txt {
-  color: rgb(5, 191, 108);
-}
-.info .item-title.green-color .item-title-decoration-l,
-.info .item-title.green-color .item-title-decoration-r,
-.info .item-title.green-color .item-title-decoration-dot {
-  background-color: rgb(5, 191, 108);
-}
 .info .item-content {
   visibility: hidden;
   position: absolute;
