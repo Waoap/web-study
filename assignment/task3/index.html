@@ -57,7 +57,7 @@
             <input
               type="number"
               id="student-no"
-              oninput="value=value.replace(/[^0-9]/g,'');if(value.length > 11)value=value.slice(0, 11)" />
+              oninput="value=value.replace(/[^0-9]/g,'');if(value<1)value=1;if(value.length > 11)value=value.slice(0, 11)" />
           </div>
           <div>
             <label for="name">姓名</label>
@@ -76,7 +76,7 @@
             <input
               type="number"
               id="grade"
-              oninput="value=value.replace(/[^0-9]/g,'');if(value>new Date().getFullYear())value=new Date().getFullYear();else if(value<1)value=1" />
+              oninput="value=value.replace(/[^0-9]/g,'');if(value<1)value=1;else if(value>new Date().getFullYear())value=new Date().getFullYear();" />
           </div>
           <div>
             <label for="class-no">班级</label>
@@ -90,7 +90,7 @@
             <input
               type="number"
               id="age"
-              oninput="value=value.replace(/[^0-9]/g,'');if(value>30)value=30" />
+              oninput="value=value.replace(/[^0-9]/g,'');if(value<1)value=1;if(value>30)value=30" />
           </div>
         </div>
         <hr />
