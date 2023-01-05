@@ -1,6 +1,9 @@
+// 存放学生信息
+const students = []
+
 /**
  * 学生类
- * @property checked 该学生是否被选中
+ * @property selected 该学生是否被选中
  * @property no 序号
  * @property studentNo 学号
  * @property name 姓名
@@ -11,100 +14,98 @@
  * @property age 年龄
  */
 class Student {
-  checked = false
+  selected = false
 
-  no = students.length
+  no = students.length + 1
 
-  _studentNo = 0
+  #studentNo = 0
   set studentNo(studentNo) {
-    this._studentNo = parseInt(studentNo)
+    this.#studentNo = parseInt(studentNo)
   }
   get studentNo() {
-    return this._studentNo
+    return this.#studentNo
   }
 
-  name = unset
+  name
 
-  college = unset
+  college
 
-  major = unset
+  major
 
-  _grade = 0
+  #grade = 0
   set grade(grade) {
-    this._grade = parseInt(grade)
+    this.#grade = parseInt(grade)
   }
   get grade() {
-    return this._grade
+    return this.#grade
   }
 
-  _classNo = 0
+  #classNo = 0
   set classNo(classNo) {
-    this._classNo = parseInt(classNo)
+    this.#classNo = parseInt(classNo)
   }
   get classNo() {
-    return this._classNo
+    return this.#classNo
   }
 
-  _age = 0
+  #age = 0
   set age(age) {
-    this._age = parseInt(age)
+    this.#age = parseInt(age)
   }
   get age() {
-    return this._age
+    return this.#age
   }
 }
 
-// 表示未设置的值
-const unset = 'unset'
+// 记录全选状态
+const fullPageSelectedStatus = []
 
-// 存放学生信息，有效索引从 1 开始，索引 i 对应第 i 个学生
-const students = [undefined]
-// 记录每页的全选状态，有效索引从 1 开始，索引 i 对应第 i 页的全选状态
-const fullPageSelectedStatus = [undefined]
+// 统计选中数量
+let checkedCount = 0
 
 const tbody = document.getElementById('table').children[0]
-const fullPageSelectedBox = document.getElementById('full-page-selected-box')
-const studentCountViewer = document.getElementById('student-count-viewer')
-const currentPageViewer = document.getElementById('current-page-viewer')
 
-// 当前所在/展示的页码，有效索引从 1 开始
+// 当前所在/展示的页码
 let currentPage = 1
 
 /**
  * 更新表中显示的数据
  */
 function updateTable() {
-  // 删除所有原本展示的学生信息：移除除表头外的所有行
+  // 学生数量
+  document.getElementById('student-count-viewer').textContent = students.length
+
+  //清空表格
   for (let i = 1; i < tbody.children.length; ) {
     tbody.removeChild(tbody.children[i])
   }
 
-  // 确定展示的页码：如果学生信息更新后，当前页码超出最大页码，自动移到最大页码处
-  let largestPage = parseInt((students.length - 2) / 10) + 1
+  // 如果删除学生后，当前页码超出最大页码，自动移到最大页码处
+  let largestPage = parseInt((students.length - 1) / 10) + 1
   if (currentPage > largestPage) {
     currentPage = largestPage
   }
+  document.getElementById('current-page-viewer').textContent = currentPage
 
-  // 根据当前页的全选状态恢复选择
-  fullPageSelectedBox.checked =
-    fullPageSelectedStatus[currentPage] === undefined
-      ? false
-      : fullPageSelectedStatus[currentPage]
+  // 读取全选状态
+  document.getElementById('full-page-selected-box').checked =
+    fullPageSelectedStatus[currentPage - 1]
 
   // 展示当前页的学生信息
   for (
-    let i = (currentPage - 1) * 10 + 1;
-    i <= currentPage * 10 && i < students.length;
+    let i = (currentPage - 1) * 10;
+    i < currentPage * 10 && i < students.length;
     i++
   ) {
     let tr = document.createElement('tr')
-    tr.id = 'student-' + i
+    tr.id = 'student-' + i + 1
     tr.className = 'info'
+    tr.setAttribute('data-no', i + 1)
     tr.innerHTML = `<td>
             <input
-                type="checkbox" ${students[i].checked ? 'checked' : ''} />
+                type="checkbox" ${students[i].selected ? 'checked' : ''} />
         </td>
-        <td>${i}</td>
+        <td>${students[i].no}</td>
         <td>${students[i].studentNo}</td>
         <td>${students[i].name}</td>
         <td>${students[i].college}</td>
@@ -118,15 +119,11 @@ function updateTable() {
         </td>`
     tbody.append(tr)
   }
-
-  // 同步当前页码、总学生信息条数等状态
-  currentPageViewer.textContent = currentPage
-  studentCountViewer.textContent = students.length - 1
 }
 
 const dialogContainer = document.getElementById('dialog-container')
 
-let dialogType = unset // -> [ 'unset', 'add', 'review', 'modify' ]
+let dialogType // -> [ 'add', 'review', 'modify' ]
 
 // 新增学生
 document.getElementById('add-btn').onclick = function () {
@@ -136,13 +133,7 @@ document.getElementById('add-btn').onclick = function () {
 
 // 删除选中的学生
 document.getElementById('remove-btn').onclick = function () {
-  let hasChecked
-  for (let i = 1; i < students.length; i++) {
-    if (students[i].checked) {
-      hasChecked = true
-    }
-  }
-  if (!hasChecked) {
+  if (checkedCount === 0) {
     alert('无选中的学生信息')
     return
   }
@@ -152,38 +143,45 @@ document.getElementById('remove-btn').onclick = function () {
   }
 
   // 删除所有被选中的学生，并且调整序号
-  for (let i = 1, j = 0; i < students.length; ) {
-    if (students[i].checked) {
+  for (let i = 0, j = 0; i < students.length; ) {
+    if (students[i].selected) {
       students.splice(i, 1)
       j++
     } else {
-      students[i].no = i++
+      students[i].no = ++i
     }
   }
 
-  // 将所有页的全选状态置为 false
-  for (let i = 1; i < fullPageSelectedStatus.length; i++) {
+  // 全部页面取消全选
+  for (let i = 0; i < fullPageSelectedStatus.length; i++) {
     fullPageSelectedStatus[i] = false
   }
+  checkedCount = 0
 
   updateTable()
 }
 
-// 当前展示页的全选事件
-fullPageSelectedBox.onclick = function () {
-  // 将当前页的全选状态取反
-  fullPageSelectedStatus[currentPage] =
-    fullPageSelectedStatus[currentPage] === undefined
-      ? true
-      : !fullPageSelectedStatus[currentPage]
+// 全选
+document.getElementById('full-page-selected-box').onclick = function () {
+  // 全选状态取反
+  fullPageSelectedStatus[currentPage - 1] =
+    !fullPageSelectedStatus[currentPage - 1]
 
-  // 对当前页的学生信息进行相应的操作（选中或取消选中）
+  // 对当前页的学生进行选中或取消选中
   for (
-    let i = (currentPage - 1) * 10 + 1;
-    i <= currentPage * 10 && i < students.length;
+    let i = (currentPage - 1) * 10;
+    i < currentPage * 10 && i < students.length;
     i++
   ) {
-    students[i].checked = fullPageSelectedStatus[currentPage]
+    if (students[i].selected !== fullPageSelectedStatus[currentPage - 1]) {
+      students[i].selected = fullPageSelectedStatus[currentPage - 1]
+
+      if (fullPageSelectedStatus[currentPage - 1]) {
+        checkedCount++
+      } else {
+        checkedCount--
+      }
+    }
   }
 
   updateTable()
@@ -192,7 +190,7 @@ fullPageSelectedBox.onclick = function () {
 const dialogContent = document.getElementById('dialog-content')
 
 // 当前操作（查看/修改）的学生（数组元素）
-let currentOperatedStudent = students[0]
+let currentOperatedStudent
 
 // 事件委托，包括单条学生信息的选中、查看和修改
 tbody.addEventListener('click', function (e) {
@@ -206,13 +204,20 @@ tbody.addEventListener('click', function (e) {
 
   // 选中的学生（数组元素）
   currentOperatedStudent =
-    students[e.target.parentNode.parentNode.children[1].textContent]
+    students[e.target.parentNode.parentNode.getAttribute('data-no') - 1]
 
   if (e.target.tagName === 'INPUT') {
     // 选中
-    let checked = !currentOperatedStudent.checked
-    e.target.checked = checked
-    currentOperatedStudent.checked = checked
+    let selected = !currentOperatedStudent.selected
+
+    if (selected) {
+      checkedCount++
+    } else {
+      checkedCount--
+    }
+
+    e.target.checked = selected
+    currentOperatedStudent.selected = selected
   } else if (e.target.tagName === 'A') {
     // 查看、修改
     dialogContainer.style.display = 'flex'
@@ -249,7 +254,7 @@ document.getElementById('last-page-btn').onclick = function () {
 
 // 展示下一页信息
 document.getElementById('next-page-btn').onclick = function () {
-  if (currentPage === parseInt((students.length - 2) / 10) + 1) {
+  if (currentPage === parseInt((students.length - 1) / 10) + 1) {
     alert('已经是最后一页！')
   } else {
     currentPage++
@@ -398,26 +403,26 @@ document.getElementById('cancel-btn').onclick = function () {
 
 /**
  * 测试方法
- * ! 仅供测试使用
+ * ! 测试使用
  */
 function test() {
-  students[1] = new Student()
-  students[1].studentNo = 12123020400
-  students[1].name = 'Waoap'
-  students[1].college = '人工智能学院'
-  students[1].major = '软件工程'
-  students[1].grade = 2021
-  students[1].classNo = 4
-  students[1].age = 20
+  students[0] = new Student()
+  students[0].studentNo = 12123020400
+  students[0].name = 'Waoap'
+  students[0].college = '人工智能学院'
+  students[0].major = '软件工程'
+  students[0].grade = 2021
+  students[0].classNo = 4
+  students[0].age = 20
   for (let i = 1; i <= 25; i++) {
     let newStudent = new Student()
-    newStudent.studentNo = students[1].studentNo + i
+    newStudent.studentNo = students[0].studentNo + i
     newStudent.name = Math.random().toString(36).slice(-8)
-    newStudent.college = students[1].college
-    newStudent.major = students[1].major
-    newStudent.grade = students[1].grade
-    newStudent.classNo = students[1].classNo - parseInt(Math.random() * 4)
-    newStudent.age = students[1].age + parseInt(Math.random() * 4)
+    newStudent.college = students[0].college
+    newStudent.major = students[0].major
+    newStudent.grade = students[0].grade
+    newStudent.classNo = students[0].classNo - parseInt(Math.random() * 4)
+    newStudent.age = students[0].age + parseInt(Math.random() * 4)
     students.push(newStudent)
   }
   updateTable()

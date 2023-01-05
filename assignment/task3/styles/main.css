@@ -10,17 +10,20 @@ body {
   padding: 10px 20px;
 }
 
-button {
-  height: 40px;
+.button {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid black;
+  line-height: 40px;
   width: 90px;
+  height: 40px;
 }
-
-button[class='green-bg-btn'] {
+.green-bg-btn {
   color: white;
   background-color: rgb(92, 184, 92);
 }
 
-button[class='red-bg-btn'] {
+.red-bg-btn {
   color: white;
   background-color: rgb(217, 83, 79);
 }
@@ -69,6 +72,7 @@ a:hover {
 #container {
   height: calc(100% - 140px);
   margin-bottom: 10px;
+  overflow-y: auto;
 }
 
 #table {
