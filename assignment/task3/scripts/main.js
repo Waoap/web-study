@@ -157,6 +157,7 @@ document
         }
       }
     }
+
     update()
   })
 
@@ -181,6 +182,7 @@ TBODY.addEventListener('click', function (e) {
   if (e.target.tagName === 'INPUT') {
     // 选中
     let selected = !currentOperatedStudent.selected
+    currentOperatedStudent.selected = selected
 
     if (selected) {
       checkedCount++
@@ -188,8 +190,26 @@ TBODY.addEventListener('click', function (e) {
       checkedCount--
     }
 
-    e.target.checked = selected
-    currentOperatedStudent.selected = selected
+    // 标记本页的所有学生信息有没有都被选中
+    let allSelected = true
+    for (
+      let i = (currentPage - 1) * 10;
+      i < currentPage * 10 && i < STUDENTS.length;
+      i++
+    ) {
+      if (!STUDENTS[i].selected) {
+        allSelected = false
+        break
+      }
+    }
+    // 都被选上，就把全选框也给选上，不然就取消
+    if (allSelected) {
+      SELECTED_STATUS[currentPage - 1] = true
+    } else {
+      SELECTED_STATUS[currentPage - 1] = false
+    }
+
+    update()
   } else if (e.target.tagName === 'A') {
     // 查看、修改
     DIALOG_CONTAINER.style.display = 'flex'
