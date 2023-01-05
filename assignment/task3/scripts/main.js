@@ -312,6 +312,7 @@ document.getElementById('confirm-btn').addEventListener('click', function () {
     newStudent.age = age
 
     STUDENTS.push(newStudent)
+
     update()
   } else if (dialogType === 'review') {
     // 查看类型的对话框，不可修改值
