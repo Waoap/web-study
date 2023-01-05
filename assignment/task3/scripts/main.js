@@ -143,10 +143,9 @@ document.getElementById('remove-btn').onclick = function () {
   }
 
   // 删除所有被选中的学生，并且调整序号
-  for (let i = 0, j = 0; i < students.length; ) {
+  for (let i = 0; i < students.length; ) {
     if (students[i].selected) {
       students.splice(i, 1)
-      j++
     } else {
       students[i].no = ++i
     }
