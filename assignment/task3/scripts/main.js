@@ -297,22 +297,22 @@ document.getElementById('confirm-btn').onclick = function () {
     newStudent.major = major
 
     let grade = dialogContent.children[4].children[1].value
-    if (grade < 1900 || grade > new Date().getFullYear()) {
-      alert('年级不合法（1900 ~ 今年）')
+    if (grade < 1950 || grade > new Date().getFullYear()) {
+      alert('年级范围应为 1950 ~ 今年')
       return
     }
     newStudent.grade = grade
 
     let classNo = dialogContent.children[5].children[1].value
     if (classNo < 1) {
-      alert('班级不合法')
+      alert('班级不应小于 1')
       return
     }
     newStudent.classNo = classNo
 
     let age = dialogContent.children[6].children[1].value
     if (age < 18 || age > 50) {
-      alert('年龄不合法（18 ~ 50）')
+      alert('年龄范围应为 18 ~ 50')
       return
     }
     newStudent.age = age
@@ -355,22 +355,22 @@ document.getElementById('confirm-btn').onclick = function () {
     currentOperatedStudent.major = major
 
     let grade = dialogContent.children[4].children[1].value
-    if (grade < 1900 || grade > new Date().getFullYear()) {
-      alert('年级不合法（1900 ~ 今年）')
+    if (grade < 1950 || grade > new Date().getFullYear()) {
+      alert('年级范围应为 1950 ~ 今年')
       return
     }
     currentOperatedStudent.grade = grade
 
     let classNo = dialogContent.children[5].children[1].value
     if (classNo < 1) {
-      alert('班级不合法')
+      alert('班级不应小于 1')
       return
     }
     currentOperatedStudent.classNo = classNo
 
     let age = dialogContent.children[6].children[1].value
     if (age < 18 || age > 50) {
-      alert('年龄不合法（18 ~ 50）')
+      alert('年龄范围应为 18 ~ 50')
       return
     }
     currentOperatedStudent.age = age
@@ -402,8 +402,7 @@ document.getElementById('cancel-btn').onclick = function () {
 }
 
 /**
- * 测试方法
- * ! 测试使用
+ * * 测试方法
  */
 function test() {
   students[0] = new Student()
